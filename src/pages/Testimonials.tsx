@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Star, MessageCircle, Heart, UserCheck, ThumbsUp, Send, CheckCircle2 } from "lucide-react";
+import { Star, MessageCircle, Heart, UserCheck, ThumbsUp, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useToast } from "@/components/ui/use-toast";
+import { useWeb3Form } from "@/hooks/useWeb3Form";
 
 interface Review {
   name: string;
@@ -17,6 +18,7 @@ interface Review {
 
 const TestimonialsPage = () => {
   const { toast } = useToast();
+  const { submitForm, isSubmitting } = useWeb3Form({ subject: "New Client Review Submission - Ikotek Solutions" });
   const [selectedFilter, setSelectedFilter] = useState<string>("all");
   const [reviews, setReviews] = useState<Review[]>([
     {
@@ -75,7 +77,7 @@ const TestimonialsPage = () => {
   const [newText, setNewText] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleReviewSubmit = (e: React.FormEvent) => {
+  const handleReviewSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newName || !newText) {
       toast({
@@ -86,28 +88,38 @@ const TestimonialsPage = () => {
       return;
     }
 
-    const submission: Review = {
+    const success = await submitForm({
       name: newName,
       role: newRole || "Client Partner",
       company: newCompany || "Independent",
-      rating: newRating,
-      text: newText,
-      category: newCategory,
-      verified: false,
-    };
-
-    setReviews([submission, ...reviews]);
-    setFormSubmitted(true);
-    toast({
-      title: "Review Submitted!",
-      description: "Thank you for your valuable feedback. It has been listed below.",
+      rating: String(newRating),
+      service_type: newCategory,
+      review_text: newText,
     });
 
-    // Reset inputs
-    setNewName("");
-    setNewRole("");
-    setNewCompany("");
-    setNewText("");
+    if (success) {
+      const submission: Review = {
+        name: newName,
+        role: newRole || "Client Partner",
+        company: newCompany || "Independent",
+        rating: newRating,
+        text: newText,
+        category: newCategory,
+        verified: false,
+      };
+      setReviews([submission, ...reviews]);
+      setFormSubmitted(true);
+      toast({
+        title: "Review Submitted!",
+        description: "Thank you for your valuable feedback. It has been listed below.",
+      });
+      setNewName("");
+      setNewRole("");
+      setNewCompany("");
+      setNewText("");
+    } else {
+      toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+    }
   };
 
   const filters = [
@@ -343,8 +355,8 @@ const TestimonialsPage = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-primary text-primary-foreground font-bold py-3 rounded-xl gap-2 mt-2">
-                  <Send className="w-4 h-4" /> Send Feedback Rating
+                <Button type="submit" disabled={isSubmitting} className="w-full bg-primary text-primary-foreground font-bold py-3 rounded-xl gap-2 mt-2">
+                  {isSubmitting ? <><Loader2 className="w-4 h-4 animate-spin" /> Sending...</> : <><Send className="w-4 h-4" /> Send Feedback Rating</>}
                 </Button>
               </form>
             )}

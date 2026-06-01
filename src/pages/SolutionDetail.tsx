@@ -3,12 +3,13 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import {
   Shield, Globe, GraduationCap, Activity, Building2, Terminal,
   CheckCircle2, ArrowRight, ArrowLeft, Send, ChevronRight,
-  TrendingUp, Code2, Layers, Users, Clock, Star
+  TrendingUp, Code2, Layers, Users, Clock, Star, Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useToast } from "@/components/ui/use-toast";
+import { useWeb3Form } from "@/hooks/useWeb3Form";
 
 interface SolutionData {
   slug: string;
@@ -285,6 +286,9 @@ const SolutionDetail = () => {
   const { solutionId } = useParams<{ solutionId: string }>();
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { submitForm, isSubmitting } = useWeb3Form({
+    subject: `New ${solution?.title || "Industry"} Consultation Request - Ikotek Solutions`,
+  });
 
   const solution = allSolutions.find((s) => s.slug === solutionId);
 
@@ -311,17 +315,27 @@ const SolutionDetail = () => {
 
   const Icon = solution.icon;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email) {
       toast({ title: "Please fill in your name and email.", variant: "destructive" });
       return;
     }
-    setSubmitted(true);
-    toast({
-      title: "Request Submitted!",
-      description: `Your ${solution.title} consultation request has been sent. We'll be in touch shortly.`,
+    const success = await submitForm({
+      name,
+      email,
+      message: message || "No additional details provided.",
+      industry: solution?.title || solutionId || "Unknown",
     });
+    if (success) {
+      setSubmitted(true);
+      toast({
+        title: "Request Submitted!",
+        description: `Your ${solution?.title} consultation request has been sent. We'll be in touch shortly.`,
+      });
+    } else {
+      toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+    }
   };
 
   return (
@@ -538,8 +552,13 @@ const SolutionDetail = () => {
                 size="lg"
                 variant="hero"
                 className="w-full gap-2 font-bold text-base"
+                disabled={isSubmitting}
               >
-                <Send className="w-4 h-4" /> Submit Consultation Request
+                {isSubmitting ? (
+                  <><Loader2 className="w-4 h-4 animate-spin" /> Sending...</>
+                ) : (
+                  <><Send className="w-4 h-4" /> Submit Consultation Request</>
+                )}
               </Button>
             </form>
           )}

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Calculator, Smartphone, Globe, Layout, ShieldCheck, Mail, CreditCard, Sparkles, Send, Database, Compass, CheckCircle2, ChevronRight, UserPlus, Clock } from "lucide-react";
+import { Calculator, Smartphone, Globe, Layout, ShieldCheck, Mail, CreditCard, Sparkles, Send, Database, Compass, CheckCircle2, ChevronRight, UserPlus, Clock, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useToast } from "@/components/ui/use-toast";
+import { useWeb3Form } from "@/hooks/useWeb3Form";
 
 interface Feature {
   id: string;
@@ -15,6 +16,7 @@ interface Feature {
 
 const ProjectCalculator = () => {
   const { toast } = useToast();
+  const { submitForm, isSubmitting } = useWeb3Form({ subject: "New Project Quote Request - Ikotek Solutions" });
   const [projectType, setProjectType] = useState<"web" | "app" | "ecommerce" | "saas">("web");
   const [projectSize, setProjectSize] = useState<"small" | "medium" | "large">("medium");
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>(["auth", "database"]);
@@ -103,7 +105,7 @@ const ProjectCalculator = () => {
     }
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!clientName || !clientEmail) {
       toast({
@@ -114,11 +116,27 @@ const ProjectCalculator = () => {
       return;
     }
 
-    setFormSubmitted(true);
-    toast({
-      title: "Estimate Submitted!",
-      description: `Your custom quote request ($${minPrice} - $${maxPrice}) has been sent. An Ikotek architect will contact you.`,
+    const success = await submitForm({
+      name: clientName,
+      email: clientEmail,
+      project_type: projectType.toUpperCase(),
+      project_size: projectSize.toUpperCase(),
+      selected_features: selectedFeatures.join(", ") || "None",
+      timeline_priority: timeline.toUpperCase(),
+      estimated_budget: `$${minPrice.toLocaleString()} - $${maxPrice.toLocaleString()}`,
+      estimated_weeks: `${weeks} weeks`,
+      additional_details: clientDetails || "No additional details provided.",
     });
+
+    if (success) {
+      setFormSubmitted(true);
+      toast({
+        title: "Estimate Submitted!",
+        description: `Your custom quote request ($${minPrice} - $${maxPrice}) has been sent. An Ikotek architect will contact you.`,
+      });
+    } else {
+      toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+    }
   };
 
   // Complexity level check
@@ -377,8 +395,8 @@ const ProjectCalculator = () => {
                           className="w-full bg-secondary/50 border border-border/60 rounded-xl p-3 text-xs"
                         />
                       </div>
-                      <Button type="submit" className="w-full bg-primary text-primary-foreground font-bold py-3 rounded-xl gap-2 mt-2">
-                        <Send className="w-4 h-4" /> Request Quote Consultation
+                      <Button type="submit" disabled={isSubmitting} className="w-full bg-primary text-primary-foreground font-bold py-3 rounded-xl gap-2 mt-2">
+                        {isSubmitting ? <><Loader2 className="w-4 h-4 animate-spin" /> Sending...</> : <><Send className="w-4 h-4" /> Request Quote Consultation</>}
                       </Button>
                     </form>
                   )}
