@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 const SolutionsPage = () => {
   const solutions = [
     {
+      slug: "fintech",
       title: "FinTech & Digital Wallets",
       icon: Shield,
       description: "Secure, real-time transactional platforms equipped with stock tracking charts, AI investment analysis, and automated accounting.",
@@ -22,6 +23,7 @@ const SolutionsPage = () => {
       ],
     },
     {
+      slug: "ecommerce",
       title: "E-Commerce & Marketplaces",
       icon: Globe,
       description: "Feature-rich marketplaces complete with multi-vendor support, inventory monitors, carbon tracking, and localized payment solutions.",
@@ -36,6 +38,7 @@ const SolutionsPage = () => {
       ],
     },
     {
+      slug: "edtech",
       title: "EdTech & Learning Portals",
       icon: GraduationCap,
       description: "Interactive online academies with student-grade tracking charts, virtual classrooms integration, and quiz builders.",
@@ -50,6 +53,7 @@ const SolutionsPage = () => {
       ],
     },
     {
+      slug: "healthcare",
       title: "Healthcare & Telemedicine",
       icon: Activity,
       description: "Secure HIPAA-compliant consulting rooms for patient-doctor matchings, visual prescription forms, and live video consulting.",
@@ -64,6 +68,7 @@ const SolutionsPage = () => {
       ],
     },
     {
+      slug: "realestate",
       title: "Real Estate Portals",
       icon: Building2,
       description: "High performance real estate indexes with 3D virtual tour support, map integrations, and instant agent-lead tracking.",
@@ -78,6 +83,7 @@ const SolutionsPage = () => {
       ],
     },
     {
+      slug: "saas",
       title: "Custom SaaS Architectures",
       icon: Terminal,
       description: "Complete design and coding pipeline for in-house SaaS platforms (like our successful Ikosender and SmartFormsAI products).",
@@ -133,7 +139,7 @@ const SolutionsPage = () => {
 
                   <div>
                     {/* Header */}
-                    <div className={`w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center mb-6`}>
+                    <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center mb-6">
                       <Icon className={`w-7 h-7 ${sol.iconColor}`} />
                     </div>
 
@@ -160,9 +166,9 @@ const SolutionsPage = () => {
                     <div className="text-[11px] font-semibold text-primary uppercase tracking-wider">
                       📊 Result: {sol.metrics}
                     </div>
-                    <Link to="/contact">
+                    <Link to={`/solutions/${sol.slug}`}>
                       <Button variant="ghost" size="sm" className="w-full justify-between hover:bg-primary/10 hover:text-primary border border-border/60 rounded-xl group/btn mt-2">
-                        Discuss Industry Solution
+                        Explore Solution Details
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
                       </Button>
                     </Link>

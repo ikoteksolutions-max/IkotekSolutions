@@ -22,6 +22,7 @@ import Ikosender from "./pages/Ikosender";
 import SmartFormsAI from "./pages/SmartFormsAI";
 import ProjectCalculator from "./pages/ProjectCalculator";
 import Solutions from "./pages/Solutions";
+import SolutionDetail from "./pages/SolutionDetail";
 import Testimonials from "./pages/Testimonials";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/products/smartformsai" element={<SmartFormsAI />} />
           <Route path="/calculator" element={<ProjectCalculator />} />
           <Route path="/solutions" element={<Solutions />} />
+          <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
