@@ -156,14 +156,6 @@ const Navbar = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/solutions">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
-                      Solutions
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
                   <Link to="/calculator">
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
                       Cost Calculator
