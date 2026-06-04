@@ -13,7 +13,7 @@ import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import Work from "./pages/Work";
 import Careers from "./pages/Careers";
-import Team from "./pages/Team";
+import CEO from "./pages/CEO";
 import Blog from "./pages/Blog";
 import FAQ from "./pages/FAQ";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -52,7 +52,7 @@ const App = () => (
           <Route path="/quote" element={<Quote />} />
           <Route path="/work" element={<Work />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/team" element={<Team />} />
+          <Route path="/ceo" element={<CEO />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />

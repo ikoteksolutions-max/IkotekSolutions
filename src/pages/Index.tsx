@@ -10,6 +10,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import TechStack from "@/components/TechStack";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import CEOSection from "@/components/CEOSection";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Hero />
       <ClientMarquee />
       <WhyChooseUs />
+      <CEOSection />
       <Services />
       <TechStack />
       <Portfolio />

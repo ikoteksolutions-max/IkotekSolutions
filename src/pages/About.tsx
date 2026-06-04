@@ -5,20 +5,7 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
 const AboutPage = () => {
-    const team = [
-      {
-      name: "Muhammad Hassan Khan",
-      role: "CMO & Marketing Head",
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQFIFY5w3TcN0A/profile-displayphoto-scale_400_400/B4DZwgMyGdJQAk-/0/1770066749835?e=1780531200&v=beta&t=8mNSgeFmOB4LeQarcWuuepCYNCWYolUzDR5z0ak-veo",
-    },
-     {
-      name: "Muhammad Raza Tariq",
-      role: "CEO & Founder",
-      image: "https://img.sanishtech.com/u/c039f9565b1b1c57d2f2f321d94a9941.jpeg",
-    },
-   
-  
-  ];
+
 
   const values = [
     {
@@ -44,10 +31,10 @@ const AboutPage = () => {
   ];
 
   const stats = [
-    { value: "500+", label: "Projects Delivered" },
-    { value: "300+", label: "Happy Clients" },
-    { value: "8+", label: "Years Experience" },
-    { value: "50+", label: "Team Members" },
+    { value: "120+", label: "Projects Delivered" },
+    { value: "90+", label: "Happy Clients" },
+    { value: "2025", label: "Year Established" },
+    { value: "20+", label: "Industry Experts" },
   ];
 
   return (
@@ -66,7 +53,7 @@ const AboutPage = () => {
               We're a Team of <span className="text-gradient-orange">Digital Innovators</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Since 2016, we've been helping businesses transform their digital presence
+              Since 2025, we've been helping businesses transform their digital presence
               and achieve remarkable growth through innovative technology solutions from Karachi to the world.
             </p>
           </div>
@@ -97,8 +84,8 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Ikotek Solutions was founded in 2016 in Karachi with a simple mission: to help businesses
-                  thrive in the digital age. What started as a small web development
+                  Ikotek Solutions was founded in 2025 in Karachi with a simple mission: to help businesses
+                  thrive in the digital age. What started as a focused custom software
                   agency has grown into a full-service digital solutions company.
                 </p>
                 <p>
@@ -151,34 +138,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20">
-        <div className="container mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Meet Our Leadership
-            </h2>
-            <p className="text-muted-foreground">
-              The talented people behind Ikotek Solutions who make the magic happen.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
-            {team.map((member) => (
-              <div key={member.name} className="text-center group w-full md:w-[calc(33.333%-1.5rem)] min-w-[280px]">
-                <div className="relative mb-4 overflow-hidden rounded-2xl">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
-                <p className="text-muted-foreground">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA */}
       <section className="py-20 bg-foreground text-background">
