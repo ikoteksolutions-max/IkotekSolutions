@@ -29,7 +29,7 @@ const CEOSection = () => {
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-white border-[6px] border-white shadow-xl transition-all duration-500 hover:scale-[1.03] flex items-end justify-center">
                   <img
                     src="/images/Muhammad Raza Tariq.png"
-                    alt="Muhammad Raza Tariq - CEO"
+                    alt="Muhammad Hassan Khan - CEO"
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -68,12 +68,12 @@ const CEOSection = () => {
               </div>
 
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                Established in <strong>2025</strong> in Karachi, Ikotek Solutions was structured to bridge the gap between high-level technology and real-world business results. Under the leadership of <strong>Muhammad Raza Tariq</strong>, our goal is to empower companies to navigate digital transformation effortlessly, utilizing clean architecture, agile timelines, and high-performance scalability.
+                Established in <strong>2025</strong> in Karachi, Ikotek Solutions was structured to bridge the gap between high-level technology and real-world business results. Under the leadership of <strong>Muhammad Hassan Khan</strong>, our goal is to empower companies to navigate digital transformation effortlessly, utilizing clean architecture, agile timelines, and high-performance scalability.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-4 border-t border-border/60">
                 <div>
-                  <h4 className="font-extrabold text-foreground text-lg leading-tight">Muhammad Raza Tariq</h4>
+                  <h4 className="font-extrabold text-foreground text-lg leading-tight">Muhammad Hassan Khan</h4>
                   <p className="text-xs text-primary font-bold uppercase tracking-wider mt-0.5">CEO & Founder, Ikotek Solutions</p>
                 </div>
                 

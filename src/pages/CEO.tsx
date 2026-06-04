@@ -48,7 +48,7 @@ const CEO = () => {
                 <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden bg-white border-8 border-white shadow-2xl transition-all duration-500 hover:scale-[1.02]">
                   <img
                     src="/images/Muhammad Raza Tariq.png"
-                    alt="Muhammad Raza Tariq - CEO & Founder"
+                    alt="Muhammad Hassan Khan - CEO & Founder"
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -56,8 +56,8 @@ const CEO = () => {
                 {/* Styled Badge */}
                 <div className="absolute -bottom-6 right-6 left-6 bg-background/95 backdrop-blur-md border border-border px-6 py-4 rounded-xl shadow-xl flex items-center justify-between">
                   <div>
-                    <h3 className="font-bold text-foreground text-lg">Muhammad Raza Tariq</h3>
-                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">CEO & Founder, Ikotek</p>
+                    <h3 className="font-bold text-foreground text-lg">Muhammad Hassan Khan</h3>
+                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">CEO & Founder, Ikotek Solutions</p>
                   </div>
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                     <Award className="w-5 h-5" />
@@ -80,10 +80,10 @@ const CEO = () => {
                   "At Ikotek Solutions, our philosophy is simple: we don't just write code; we build digital assets that scale businesses, enhance operational speed, and fuel long-term growth."
                 </p>
                 <p>
-                  Ikotek Solutions was established in <strong className="text-foreground">2025</strong> in Karachi, Pakistan, with a clear and ambitious vision: to deliver world-class custom software development, mobile apps, and SaaS products. Muhammad Raza Tariq founded this organization to combine high-performance engineering with intuitive design, helping companies transform their operational workflows.
+                  Ikotek Solutions was established in <strong className="text-foreground">2025</strong> in Karachi, Pakistan, with a clear and ambitious vision: to deliver world-class custom software development, mobile apps, and SaaS products. Muhammad Hassan Khan founded this organization to combine high-performance engineering with intuitive design, helping companies transform their operational workflows.
                 </p>
                 <p>
-                  Raza is a deep believer in absolute technical excellence, customer-centric architecture, and agility. He champions a high-ownership culture where engineering teams collaborate directly with clients to drive real, measurable metrics. Under his strategic guidance, Ikotek Solutions has rapidly become a hub of digital innovation.
+                  Hassan is a deep believer in absolute technical excellence, customer-centric architecture, and agility. He champions a high-ownership culture where engineering teams collaborate directly with clients to drive real, measurable metrics. Under his strategic guidance, Ikotek Solutions has rapidly become a hub of digital innovation.
                 </p>
               </div>
 
@@ -164,7 +164,7 @@ const CEO = () => {
               </p>
               <div className="pt-6 border-t border-border/60 flex items-center justify-between">
                 <div>
-                  <p className="font-bold text-foreground">Muhammad Raza Tariq</p>
+                  <p className="font-bold text-foreground">Muhammad Hassan Khan</p>
                   <p className="text-xs text-muted-foreground">CEO & Founder, Ikotek Solutions</p>
                 </div>
                 <Link to="/contact">
