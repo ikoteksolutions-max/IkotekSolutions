@@ -28,7 +28,7 @@ const CEOSection = () => {
                 {/* White background container for transparent image */}
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-white border-[6px] border-white shadow-xl transition-all duration-500 hover:scale-[1.03] flex items-end justify-center">
                   <img
-                    src="/images/Muhammad Raza Tariq.png"
+                    src="/images/Muhammad Hassan Khan.png"
                     alt="Muhammad Hassan Khan - CEO"
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />

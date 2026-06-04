@@ -47,7 +47,7 @@ const CEO = () => {
                 {/* Image Container with Custom White Background */}
                 <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden bg-white border-8 border-white shadow-2xl transition-all duration-500 hover:scale-[1.02]">
                   <img
-                    src="/images/Muhammad Raza Tariq.png"
+                    src="/images/Muhammad Hassan Khan.png"
                     alt="Muhammad Hassan Khan - CEO & Founder"
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
@@ -119,7 +119,7 @@ const CEO = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold">My Personal Commitments To Our Partners</h2>
-            <p className="text-sm text-muted-foreground mt-2">Muhammad Raza Tariq — CEO & Founder</p>
+            <p className="text-sm text-muted-foreground mt-2">Muhammad Hassan Khan — CEO & Founder</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
