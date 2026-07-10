@@ -10,6 +10,33 @@ const WorkPage = () => {
 
   const projects = [
     {
+      title: "The Student Space WhatsApp AI Agent",
+      category: "Custom Software",
+      description: "An automated WhatsApp AI assistant with LLM integration built for student support, course suggestions, and quick FAQ resolution for The Student Space.",
+      image: "https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?w=800&h=600&fit=crop",
+      gradient: "from-purple-600 to-pink-600",
+      results: ["5,000+ daily queries resolved", "24/7 instant support"],
+      tags: ["WhatsApp Business API", "OpenAI API", "Node.js", "Express"]
+    },
+    {
+      title: "Al-Khidmat Receipt Verification System",
+      category: "Custom Software",
+      description: "Automated verification system for bank receipts and donation receipts using OCR and pattern matching, streamlining backend audit processes.",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop",
+      gradient: "from-emerald-600 to-teal-600",
+      results: ["98% verification accuracy", "80% audit workload reduction"],
+      tags: ["Python", "OCR", "Node.js", "MongoDB"]
+    },
+    {
+      title: "Prime Dental Supplies Showcase",
+      category: "Web Development",
+      description: "A premium product showcase and inventory catalog website designed for dental equipment distribution with advanced filters.",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop",
+      gradient: "from-blue-600 to-indigo-600",
+      results: ["Fast product loading", "1,200+ listed products"],
+      tags: ["React", "Tailwind CSS", "Vite"]
+    },
+    {
       title: "FinTech Dashboard Pro",
       category: "Web Development",
       description: "A comprehensive financial analytics dashboard with real-time stock tracking and AI-powered investment insights.",

@@ -155,13 +155,7 @@ const Navbar = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <Link to="/calculator">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
-                      Cost Calculator
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
+
 
                 <NavigationMenuItem>
                   <Link to="/testimonials">
@@ -277,7 +271,7 @@ const Navbar = () => {
               </div>
 
 
-              <Link to="/calculator" className="px-4 py-2 hover:bg-accent rounded-md" onClick={() => setIsOpen(false)}>Cost Calculator</Link>
+
               <Link to="/testimonials" className="px-4 py-2 hover:bg-accent rounded-md" onClick={() => setIsOpen(false)}>Reviews</Link>
               <Link to="/work" className="px-4 py-2 hover:bg-accent rounded-md" onClick={() => setIsOpen(false)}>Our Work</Link>
               
@@ -301,6 +295,14 @@ const Navbar = () => {
             </div>
           </div>
         )}
+      </div>
+      {/* Hidden SEO Keywords */}
+      <div style={{ display: 'none' }} aria-hidden="true">
+        <span>Ikotek Solutions</span>
+        <span>ikoteksolutions</span>
+        <span>Ikotek Solutions Karachi</span>
+        <span>ikoteksolutions-max</span>
+        <span>Ikotek Solutions Software Development</span>
       </div>
     </nav>
   );

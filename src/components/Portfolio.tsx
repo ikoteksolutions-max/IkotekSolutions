@@ -5,6 +5,27 @@ import { Link } from "react-router-dom";
 const Portfolio = () => {
   const projects = [
     {
+      title: "The Student Space WhatsApp AI Agent",
+      category: "Custom Software",
+      description: "An automated WhatsApp AI assistant with LLM integration built for student support and query resolution.",
+      image: "https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?w=800&h=600&fit=crop",
+      gradient: "from-purple-600 to-pink-600",
+    },
+    {
+      title: "Al-Khidmat Receipt Verification System",
+      category: "Custom Software",
+      description: "Automated bank receipt verification system using OCR and intelligent pattern matching for donation auditing.",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop",
+      gradient: "from-emerald-600 to-teal-600",
+    },
+    {
+      title: "Prime Dental Supplies Catalog",
+      category: "Web Development",
+      description: "Premium product showcase and inventory catalog website designed for high-end dental equipment distribution.",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop",
+      gradient: "from-blue-600 to-indigo-600",
+    },
+    {
       title: "Enterprise E-Commerce Platform",
       category: "Web Development",
       description: "Full-stack e-commerce solution with real-time inventory and payment integration",
@@ -24,13 +45,6 @@ const Portfolio = () => {
       description: "Cross-platform fitness tracking with AI-powered workout recommendations",
       image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop",
       gradient: "from-[hsl(142,70%,45%)] to-[hsl(160,70%,50%)]",
-    },
-    {
-      title: "Real Estate Platform",
-      category: "Web Development",
-      description: "Property listing platform with virtual tours and smart search functionality",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
-      gradient: "from-[hsl(270,70%,55%)] to-[hsl(290,70%,60%)]",
     },
   ];
 

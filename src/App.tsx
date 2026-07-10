@@ -23,7 +23,6 @@ import NotFound from "./pages/NotFound";
 import Products from "./pages/Products";
 import Ikosender from "./pages/Ikosender";
 import SmartFormsAI from "./pages/SmartFormsAI";
-import ProjectCalculator from "./pages/ProjectCalculator";
 
 import SolutionDetail from "./pages/SolutionDetail";
 import Testimonials from "./pages/Testimonials";
@@ -42,7 +41,7 @@ const App = () => (
           <Route path="/products" element={<Products />} />
           <Route path="/products/ikosender" element={<Ikosender />} />
           <Route path="/products/smartformsai" element={<SmartFormsAI />} />
-          <Route path="/calculator" element={<ProjectCalculator />} />
+
 
           <Route path="/solutions/:solutionId" element={<SolutionDetail />} />
           <Route path="/testimonials" element={<Testimonials />} />

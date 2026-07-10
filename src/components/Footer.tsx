@@ -21,7 +21,6 @@ const Footer = () => {
       { name: "About Us", href: "/about" },
       { name: "CEO", href: "/ceo" },
       { name: "Our Work", href: "/work" },
-      { name: "Cost Calculator", href: "/calculator" },
       { name: "Careers", href: "/careers" },
     ],
     products: [
@@ -211,6 +210,14 @@ const Footer = () => {
         >
           <PhoneCall className="w-6 h-6" />
         </a>
+      </div>
+      {/* Hidden SEO Keywords */}
+      <div style={{ display: 'none' }} aria-hidden="true">
+        <span>Ikotek Solutions</span>
+        <span>ikoteksolutions</span>
+        <span>Ikotek Solutions Karachi</span>
+        <span>ikoteksolutions-max</span>
+        <span>Ikotek Solutions Software Development</span>
       </div>
     </footer>
   );
