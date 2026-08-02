@@ -101,8 +101,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-background/60">
                 <Phone className="w-5 h-5" />
-                <a href="tel:+923710013071" className="hover:text-background transition-colors">
-                  +92 371 0013071
+                <a href="tel:+923433452279" className="hover:text-background transition-colors">
+                  +92 343 3452279
                 </a>
               </div>
               <div className="flex items-center gap-3 text-background/60">
@@ -197,7 +197,7 @@ const Footer = () => {
       {/* Floating Contact Buttons */}
       <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
         <a
-          href="https://wa.me/923710013071"
+          href="https://wa.me/923433452279"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 rounded-full bg-[hsl(142,70%,45%)] text-primary-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
@@ -205,7 +205,7 @@ const Footer = () => {
           <MessageCircle className="w-6 h-6" />
         </a>
         <a
-          href="tel:+923710013071"
+          href="tel:+923433452279"
           className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
         >
           <PhoneCall className="w-6 h-6" />

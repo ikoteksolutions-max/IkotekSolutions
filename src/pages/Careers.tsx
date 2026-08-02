@@ -87,7 +87,7 @@ const Careers = () => {
                                     </div>
                                 </div>
                                 <a
-                                    href={`https://wa.me/923710013071?text=${encodeURIComponent(`Hello Ikotek Solutions, I am interested in applying for the ${job.title} position found on your careers page.`)}`}
+                                    href={`https://wa.me/923433452279?text=${encodeURIComponent(`Hello Ikotek Solutions, I am interested in applying for the ${job.title} position found on your careers page.`)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

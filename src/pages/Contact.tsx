@@ -188,8 +188,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Phone</h3>
-                    <a href="tel:+923710013071" className="text-muted-foreground hover:text-primary transition-colors">
-                      +92 371 0013071
+                    <a href="tel:+923433452279" className="text-muted-foreground hover:text-primary transition-colors">
+                      +92 343 3452279
                     </a>
                   </div>
                 </div>
