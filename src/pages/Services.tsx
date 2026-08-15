@@ -1,4 +1,4 @@
-import { Globe, Search, Megaphone, Code, Palette, Smartphone, Check, ArrowRight } from "lucide-react";
+import { Globe, Search, Megaphone, Code, Palette, Smartphone, Check, ArrowRight, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -99,6 +99,21 @@ const ServicesPage = () => {
         "Analytics Integration"
       ],
       price: "Starting from PKR 300,000"
+    },
+    {
+      icon: Bot,
+      title: "AI Agent Development",
+      description: "Custom conversational AI bots, LLM integrations, and automated customer support workflows.",
+      color: "bg-orange-500/10 text-orange-500",
+      features: [
+        "LLM & GPT Integrations",
+        "WhatsApp & Messenger Automation",
+        "RAG (Knowledge Base Integration)",
+        "Customer Support AI Agents",
+        "Workflow Automation Triggers",
+        "Voice Assistant Development"
+      ],
+      price: "Starting from PKR 100,000"
     },
   ];
 

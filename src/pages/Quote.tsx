@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Globe, Search, Megaphone, Code, Palette, Smartphone, ArrowRight, Check, Loader2 } from "lucide-react";
+import { Globe, Search, Megaphone, Code, Palette, Smartphone, ArrowRight, Check, Loader2, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -76,6 +76,7 @@ const QuotePage = () => {
     { icon: Code, label: "Custom Software", color: "text-[hsl(200,70%,50%)]" },
     { icon: Palette, label: "UI/UX Design", color: "text-[hsl(0,70%,55%)]" },
     { icon: Smartphone, label: "Mobile Development", color: "text-[hsl(45,90%,50%)]" },
+    { icon: Bot, label: "AI Agent Development", color: "text-orange-500" },
   ];
 
   const budgets = [

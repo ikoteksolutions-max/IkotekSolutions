@@ -1,4 +1,4 @@
-import { Globe, Search, Megaphone, Code, Palette, Smartphone, ArrowUpRight } from "lucide-react";
+import { Globe, Search, Megaphone, Code, Palette, Smartphone, ArrowUpRight, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Services = () => {
@@ -44,6 +44,13 @@ const Services = () => {
       description: "Native and cross-platform mobile apps that deliver seamless experiences on any device.",
       color: "bg-[hsl(45,90%,50%)]/10 text-[hsl(45,90%,50%)]",
       href: "/services#mobile-development",
+    },
+    {
+      icon: Bot,
+      title: "AI Agent Development",
+      description: "Custom conversational AI bots, LLM integrations, and automated customer support workflows.",
+      color: "bg-orange-500/10 text-orange-500",
+      href: "/services#ai-agent-development",
     },
   ];
 

@@ -116,6 +116,7 @@ const ContactPage = () => {
     "Custom Software",
     "UI/UX Design",
     "Mobile Development",
+    "AI Agent Development",
     "E-Commerce Solutions",
     "Other",
   ];

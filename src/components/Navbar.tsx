@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, MessageCircle, Code, Palette, Globe, Smartphone, LineChart, Search, Cpu, Send, Layout, Sparkles, Layers, Users, Star } from "lucide-react";
+import { Menu, X, MessageCircle, Code, Palette, Globe, Smartphone, LineChart, Search, Cpu, Send, Layout, Sparkles, Layers, Users, Star, Bot } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
   NavigationMenu,
@@ -59,6 +59,12 @@ const Navbar = () => {
       href: "/pricing/business-automation",
       description: "Automate your marketing and operations.",
       icon: Cpu,
+    },
+    {
+      title: "AI Agent Development",
+      href: "/services#ai-agent-development",
+      description: "Custom conversational AI bots and workflows.",
+      icon: Bot,
     },
   ];
 

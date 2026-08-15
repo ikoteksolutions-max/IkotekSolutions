@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Search, Megaphone, Code, Palette, Smartphone, Loader2, Check } from "lucide-react";
+import { ArrowRight, Globe, Search, Megaphone, Code, Palette, Smartphone, Loader2, Check, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -24,6 +24,7 @@ const Hero = () => {
     { icon: Code, label: "Custom Software" },
     { icon: Palette, label: "UI/UX Design" },
     { icon: Smartphone, label: "Mobile Apps" },
+    { icon: Bot, label: "AI Agent Development" },
   ];
 
   const toggleService = (service: string) => {
