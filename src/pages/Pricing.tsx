@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import { Check, ArrowRight, Star, Shield, Zap, Globe, Search, Megaphone, Code, Palette, Smartphone, Cpu } from "lucide-react";
+import { Check, ArrowRight, Star, Shield, Zap, Globe, Search, Megaphone, Code, Palette, Smartphone, Cpu, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -260,6 +260,35 @@ const PricingPage = () => {
           price: "Custom",
           description: "Custom AI & ML driven business logic automation.",
           features: ["Custom AI Chatbots", "Big Data Analytics", "Legacy System Migration", "Autonomous Workflows", "24/7 Priority Support"],
+          icon: Shield
+        }
+      ]
+    },
+    {
+      id: "ai-agent-development",
+      service: "AI Agent Development",
+      icon: Bot,
+      plans: [
+        {
+          title: "AI Starter Bot",
+          price: "PKR 100,000",
+          description: "Custom FAQ chatbot with standard LLM setup.",
+          features: ["1 Chat Channel (Web/WhatsApp)", "Basic FAQ Training", "Standard GPT-4o Integration", "Lead Gen Capture Form", "1 Month Support", "Basic Dashboard"],
+          icon: Zap
+        },
+        {
+          title: "AI Business Pro",
+          price: "PKR 250,000",
+          description: "Intelligent assistant with dynamic workflows and integrations.",
+          features: ["2 Chat Channels (WhatsApp + Web)", "Custom Knowledge Base (RAG)", "Database Integrations", "Custom API Action Triggers", "3 Months Support & Analytics", "Fine-tuned Prompts"],
+          highlighted: true,
+          icon: Star
+        },
+        {
+          title: "AI Enterprise Logic",
+          price: "Custom",
+          description: "Autonomous multi-agent system matching complex business logic.",
+          features: ["Multi-Agent Orchestration", "Voice Assistant Integration", "Legacy System Synchronization", "Custom Model Fine-tuning", "Ongoing SLA Maintenance", "24/7 Security Audit"],
           icon: Shield
         }
       ]
