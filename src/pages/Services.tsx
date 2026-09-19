@@ -11,10 +11,25 @@ import { Link } from "react-router-dom";
 const ServicesPage = () => {
   const services = [
     {
+      icon: Cpu,
+      title: "Full Business Automation",
+      description: "Turn-key end-to-end automation of your company's entire operations, sales, support, and AI infrastructure.",
+      color: "bg-primary/10 text-primary",
+      features: [
+        "Complete Operational Audit",
+        "Turn-key AI Infrastructure",
+        "Autonomous Sales & Support",
+        "CRM & ERP Data Synchronization",
+        "Custom Management Dashboard",
+        "Dedicated SLA & 24/7 Monitoring"
+      ],
+      price: "Starting from PKR 300,000"
+    },
+    {
       icon: Workflow,
       title: "AI Workflow Automation",
       description: "Custom AI pipelines that automate complex multi-step business logic, decision trees, and document processing.",
-      color: "bg-primary/10 text-primary",
+      color: "bg-[hsl(200,70%,50%)]/10 text-[hsl(200,70%,50%)]",
       features: [
         "Autonomous Logic Trees",
         "Document & OCR Parsing",

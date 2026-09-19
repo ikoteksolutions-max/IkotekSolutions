@@ -18,6 +18,7 @@ const Hero = () => {
   });
 
   const services = [
+    { icon: Cpu, label: "Full Business Automation" },
     { icon: Workflow, label: "AI Workflows" },
     { icon: Bot, label: "Custom AI Agents" },
     { icon: Database, label: "CRM / ERP Automation" },

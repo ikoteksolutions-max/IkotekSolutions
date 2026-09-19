@@ -62,6 +62,64 @@ const PricingPage = () => {
 
   const servicePricing = [
     {
+      id: "full-business-automation",
+      service: "Full Business Automation",
+      icon: Cpu,
+      plans: [
+        {
+          title: "Auto-Lite",
+          price: "PKR 300,000",
+          description: "Automate core recurring tasks and workflows.",
+          features: ["Complete Operations Audit", "CRM & Lead Automation", "Email & Chat Auto-responders", "Zapier / Make Integration", "1 Month Support"],
+          icon: Zap
+        },
+        {
+          title: "Business Elite",
+          price: "PKR 750,000",
+          description: "Full end-to-end automation for your entire company.",
+          features: ["Turn-key AI Infrastructure", "Custom ERP & Payment Automation", "Autonomous Sales & Support Bots", "Inventory & HR Sync", "6 Months Support"],
+          highlighted: true,
+          icon: Star
+        },
+        {
+          title: "Enterprise Autonomous",
+          price: "Custom",
+          description: "Custom AI-driven autonomous enterprise operations.",
+          features: ["Multi-Agent AI Orchestration", "Big Data Analytics", "Legacy System Migration", "24/7 Priority SLA Monitoring", "Dedicated Strategy Team"],
+          icon: Shield
+        }
+      ]
+    },
+    {
+      id: "business-automation",
+      service: "Full Business Automation",
+      icon: Cpu,
+      plans: [
+        {
+          title: "Auto-Lite",
+          price: "PKR 300,000",
+          description: "Automate core recurring tasks and workflows.",
+          features: ["Complete Operations Audit", "CRM & Lead Automation", "Email & Chat Auto-responders", "Zapier / Make Integration", "1 Month Support"],
+          icon: Zap
+        },
+        {
+          title: "Business Elite",
+          price: "PKR 750,000",
+          description: "Full end-to-end automation for your entire company.",
+          features: ["Turn-key AI Infrastructure", "Custom ERP & Payment Automation", "Autonomous Sales & Support Bots", "Inventory & HR Sync", "6 Months Support"],
+          highlighted: true,
+          icon: Star
+        },
+        {
+          title: "Enterprise Autonomous",
+          price: "Custom",
+          description: "Custom AI-driven autonomous enterprise operations.",
+          features: ["Multi-Agent AI Orchestration", "Big Data Analytics", "Legacy System Migration", "24/7 Priority SLA Monitoring", "Dedicated Strategy Team"],
+          icon: Shield
+        }
+      ]
+    },
+    {
       id: "ai-workflow-automation",
       service: "AI Workflow Automation",
       icon: Workflow,

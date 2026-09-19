@@ -4,10 +4,17 @@ import { Link } from "react-router-dom";
 const Services = () => {
   const services = [
     {
+      icon: Cpu,
+      title: "Full Business Automation",
+      description: "Turn-key end-to-end automation of your company's entire operations, workflows, sales, and AI infrastructure.",
+      color: "bg-primary/10 text-primary",
+      href: "/services#full-business-automation",
+    },
+    {
       icon: Workflow,
       title: "AI Workflow Automation",
       description: "Custom AI pipelines that automate complex multi-step business logic, decision trees, and document processing.",
-      color: "bg-primary/10 text-primary",
+      color: "bg-[hsl(200,70%,50%)]/10 text-[hsl(200,70%,50%)]",
       href: "/services#ai-workflow-automation",
     },
     {

@@ -19,6 +19,12 @@ const Navbar = () => {
 
   const services = [
     {
+      title: "Full Business Automation",
+      href: "/services#full-business-automation",
+      description: "Turn-key end-to-end automation of your company's entire operations.",
+      icon: Cpu,
+    },
+    {
       title: "AI Workflow Automation",
       href: "/services#ai-workflow-automation",
       description: "Automate complex business processes with intelligent AI flows.",

@@ -110,6 +110,7 @@ const ContactPage = () => {
   };
 
   const services = [
+    "Full Business Automation",
     "AI Workflow Automation",
     "Custom AI Agents & Bots",
     "CRM & ERP Automation",

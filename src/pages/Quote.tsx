@@ -70,7 +70,8 @@ const QuotePage = () => {
   }, [searchParams]);
 
   const services = [
-    { icon: Workflow, label: "AI Workflow Automation", color: "text-primary" },
+    { icon: Cpu, label: "Full Business Automation", color: "text-primary" },
+    { icon: Workflow, label: "AI Workflow Automation", color: "text-[hsl(200,70%,50%)]" },
     { icon: Bot, label: "Custom AI Agents & Bots", color: "text-orange-500" },
     { icon: Database, label: "CRM & ERP Automation", color: "text-[hsl(200,70%,50%)]" },
     { icon: Zap, label: "Lead & Sales Automation", color: "text-[hsl(142,70%,45%)]" },
