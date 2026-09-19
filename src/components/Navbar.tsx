@@ -164,10 +164,22 @@ const Navbar = () => {
                         </li>
                       ))}
                     </ul>
+                    <div className="border-t border-border/40 p-3 bg-muted/40 flex justify-between items-center text-xs">
+                      <span className="text-muted-foreground">Compare all automation packages</span>
+                      <Link to="/pricing" className="font-bold text-primary hover:underline">
+                        View All Pricing Plans →
+                      </Link>
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-
+                <NavigationMenuItem>
+                  <Link to="/pricing">
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent font-medium")}>
+                      Pricing
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
 
                 <NavigationMenuItem>
                   <Link to="/testimonials">
@@ -284,6 +296,7 @@ const Navbar = () => {
 
 
 
+              <Link to="/pricing" className="px-4 py-2 hover:bg-accent rounded-md font-semibold text-primary" onClick={() => setIsOpen(false)}>Pricing Plans</Link>
               <Link to="/testimonials" className="px-4 py-2 hover:bg-accent rounded-md" onClick={() => setIsOpen(false)}>Reviews</Link>
               <Link to="/work" className="px-4 py-2 hover:bg-accent rounded-md" onClick={() => setIsOpen(false)}>Our Work</Link>
               

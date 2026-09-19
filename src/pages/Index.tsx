@@ -11,6 +11,7 @@ import TechStack from "@/components/TechStack";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import CEOSection from "@/components/CEOSection";
+import PricingSection from "@/components/PricingSection";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <TechStack />
       <Portfolio />
       <Process />
+      <PricingSection />
       <Testimonials />
       <FAQSection />
       <CTASection />

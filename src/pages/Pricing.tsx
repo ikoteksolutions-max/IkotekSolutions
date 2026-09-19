@@ -56,10 +56,6 @@ const SectionHeader = ({ title, subtitle, icon: Icon }: any) => (
 const PricingPage = () => {
   const { serviceId } = useParams();
 
-  if (!serviceId) {
-    return <Navigate to="/" replace />;
-  }
-
   const servicePricing = [
     {
       id: "full-business-automation",
@@ -295,7 +291,9 @@ const PricingPage = () => {
     }
   ];
 
-  const filteredPricing = servicePricing.filter(s => s.id === serviceId);
+  const filteredPricing = serviceId
+    ? servicePricing.filter(s => s.id === serviceId)
+    : servicePricing;
 
   return (
     <div className="min-h-screen bg-background">
@@ -311,13 +309,13 @@ const PricingPage = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             {serviceId
               ? `Pricing for ${filteredPricing[0]?.service || "Our Services"}`
-              : <>The Right Price for <span className="text-gradient-orange">Scale</span></>
+              : <>Transparent Pricing for <span className="text-gradient-orange">Every Need</span></>
             }
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             {serviceId
               ? `Transparent pricing packages tailored for ${filteredPricing[0]?.service} excellence.`
-              : "Transparent pricing designed to grow with your business. No hidden fees, just pure value and high-end results."
+              : "All-inclusive automation packages with clear pricing. No hidden fees — just results."
             }
           </p>
         </div>
@@ -330,7 +328,7 @@ const PricingPage = () => {
             <div className="container mx-auto px-4">
               <SectionHeader
                 title={service.service}
-                subtitle={serviceId ? "Choose your plan" : `Pricing for ${service.service}`}
+                subtitle={serviceId ? "Choose your plan" : `${service.service} Plans`}
                 icon={service.icon}
               />
               <div className="grid md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">

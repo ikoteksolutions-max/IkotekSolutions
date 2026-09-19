@@ -30,6 +30,7 @@ const Footer = () => {
       { name: "Client Reviews", href: "/testimonials" },
     ],
     support: [
+      { name: "Pricing Plans", href: "/pricing" },
       { name: "Contact Us", href: "/contact" },
       { name: "Get a Quote", href: "/quote" },
       { name: "FAQ", href: "/faq" },
