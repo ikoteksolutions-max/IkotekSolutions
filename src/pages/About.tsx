@@ -50,11 +50,10 @@ const AboutPage = () => {
               About Us
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              We're a Team of <span className="text-gradient-orange">Digital Innovators</span>
+              Pioneers in <span className="text-gradient-orange">Business Automation</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Since 2025, we've been helping businesses transform their digital presence
-              and achieve remarkable growth through innovative technology solutions from Karachi to the world.
+              Established in 2025 in Karachi, Ikotek Solutions engineers AI-driven workflows, custom AI agents, and enterprise integrations to eliminate operational bottlenecks worldwide.
             </p>
           </div>
         </div>
@@ -84,18 +83,13 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Ikotek Solutions was founded in 2025 in Karachi with a simple mission: to help businesses
-                  thrive in the digital age. What started as a focused custom software
-                  agency has grown into a full-service digital solutions company.
+                  Ikotek Solutions was founded in 2025 in Karachi with a clear vision: to empower modern businesses with frictionless, automated operations.
                 </p>
                 <p>
-                  Over the years, we've had the privilege of working with startups,
-                  small businesses, and enterprise clients across Pakistan and internationally.
-                  Our diverse experience has shaped our approach to digital transformation.
+                  Recognizing that modern teams spend up to 40% of their time on repetitive tasks, we specialized exclusively in Business Automation, AI Agents, CRM/ERP pipelines, and cloud integrations.
                 </p>
                 <p>
-                  Today, we're proud to be a trusted partner for over 300 clients
-                  worldwide, delivering innovative solutions that drive real results.
+                  Today, we are a trusted partner for companies globally, deploying intelligent workflows that reduce operating costs and accelerate business growth.
                 </p>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Globe, Search, Megaphone, Code, Palette, Smartphone, ArrowRight, Check, Loader2, Bot } from "lucide-react";
+import { Workflow, Bot, Database, Zap, Send, Cpu, ArrowRight, Check, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -70,13 +70,12 @@ const QuotePage = () => {
   }, [searchParams]);
 
   const services = [
-    { icon: Globe, label: "Web Development", color: "text-primary" },
-    { icon: Search, label: "SEO Optimization", color: "text-[hsl(142,70%,45%)]" },
-    { icon: Megaphone, label: "Digital Marketing", color: "text-[hsl(270,70%,55%)]" },
-    { icon: Code, label: "Custom Software", color: "text-[hsl(200,70%,50%)]" },
-    { icon: Palette, label: "UI/UX Design", color: "text-[hsl(0,70%,55%)]" },
-    { icon: Smartphone, label: "Mobile Development", color: "text-[hsl(45,90%,50%)]" },
-    { icon: Bot, label: "AI Agent Development", color: "text-orange-500" },
+    { icon: Workflow, label: "AI Workflow Automation", color: "text-primary" },
+    { icon: Bot, label: "Custom AI Agents & Bots", color: "text-orange-500" },
+    { icon: Database, label: "CRM & ERP Automation", color: "text-[hsl(200,70%,50%)]" },
+    { icon: Zap, label: "Lead & Sales Automation", color: "text-[hsl(142,70%,45%)]" },
+    { icon: Send, label: "Marketing Automation", color: "text-[hsl(270,70%,55%)]" },
+    { icon: Cpu, label: "API Systems Integration", color: "text-[hsl(45,90%,50%)]" },
   ];
 
   const budgets = [

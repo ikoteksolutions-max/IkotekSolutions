@@ -1,4 +1,4 @@
-import { Globe, Search, Megaphone, Code, Palette, Smartphone, Check, ArrowRight, Bot } from "lucide-react";
+import { Workflow, Bot, Database, Zap, Send, Cpu, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,110 +11,95 @@ import { Link } from "react-router-dom";
 const ServicesPage = () => {
   const services = [
     {
-      icon: Globe,
-      title: "Web Development",
-      description: "Custom websites built with cutting-edge technologies for optimal performance and user experience.",
+      icon: Workflow,
+      title: "AI Workflow Automation",
+      description: "Custom AI pipelines that automate complex multi-step business logic, decision trees, and document processing.",
       color: "bg-primary/10 text-primary",
       features: [
-        "Custom Website Design",
-        "E-commerce Solutions",
-        "CMS Development",
-        "Progressive Web Apps",
-        "API Integration",
-        "Performance Optimization"
+        "Autonomous Logic Trees",
+        "Document & OCR Parsing",
+        "Multi-step Zapier/Make Pipelines",
+        "Approval Flow Automations",
+        "Custom Python AI Scripts",
+        "Real-time Error Monitoring"
       ],
-      price: "Starting from PKR 50,000"
+      price: "Starting from PKR 100,000"
     },
     {
-      icon: Search,
-      title: "SEO Optimization",
-      description: "Data-driven SEO strategies that boost your visibility and drive organic traffic to your business.",
-      color: "bg-[hsl(142,70%,45%)]/10 text-[hsl(142,70%,45%)]",
+      icon: Bot,
+      title: "Custom AI Agents & Bots",
+      description: "Autonomous conversational AI agents for 24/7 customer support, internal knowledge RAG, and query handling.",
+      color: "bg-orange-500/10 text-orange-500",
       features: [
-        "Keyword Research",
-        "On-Page SEO",
-        "Technical SEO Audit",
-        "Link Building",
-        "Local SEO",
-        "Monthly Reporting"
+        "LLM & GPT-4o Integrations",
+        "WhatsApp & Messenger Automation",
+        "Knowledge Base RAG Setup",
+        "Customer Support AI Agents",
+        "Automated Action Triggers",
+        "Prompt Fine-tuning"
       ],
-      price: "Starting from PKR 25,000/mo"
+      price: "Starting from PKR 100,000"
     },
     {
-      icon: Megaphone,
-      title: "Digital Marketing",
-      description: "Strategic digital marketing campaigns that maximize ROI and reach your target audience effectively.",
-      color: "bg-[hsl(270,70%,55%)]/10 text-[hsl(270,70%,55%)]",
-      features: [
-        "Google Ads Management",
-        "Social Media Marketing",
-        "Content Marketing",
-        "Email Marketing",
-        "Influencer Marketing",
-        "Analytics & Reporting"
-      ],
-      price: "Starting from PKR 35,000/mo"
-    },
-    {
-      icon: Code,
-      title: "Custom Software",
-      description: "Tailored software solutions designed to streamline your operations and boost productivity.",
+      icon: Database,
+      title: "CRM & ERP Automation",
+      description: "Seamless synchronization of customer data, invoice processing, inventory tracking, and enterprise ERP tasks.",
       color: "bg-[hsl(200,70%,50%)]/10 text-[hsl(200,70%,50%)]",
       features: [
-        "Business Process Automation",
-        "CRM Development",
-        "ERP Solutions",
-        "Database Design",
-        "Cloud Integration",
-        "Ongoing Support"
+        "HubSpot / Salesforce Sync",
+        "Automated Invoice Generation",
+        "Inventory Stock Triggers",
+        "Role-based Data Routing",
+        "Legacy Database Pipelines",
+        "Custom ERP Connectors"
       ],
       price: "Starting from PKR 200,000"
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive designs that create memorable experiences and drive conversions.",
-      color: "bg-[hsl(0,70%,55%)]/10 text-[hsl(0,70%,55%)]",
+      icon: Zap,
+      title: "Lead & Sales Automation",
+      description: "Automated lead capture, instant qualification, AI follow-ups, and calendar booking routing for sales teams.",
+      color: "bg-[hsl(142,70%,45%)]/10 text-[hsl(142,70%,45%)]",
       features: [
-        "User Research",
-        "Wireframing",
-        "Prototype Development",
-        "Visual Design",
-        "Usability Testing",
-        "Design Systems"
+        "Instant Lead Qualification",
+        "Automated Meeting Booking",
+        "Multi-channel AI Follow-ups",
+        "CRM Deal State Updates",
+        "Sales Rep Lead Distribution",
+        "Conversion Analytics"
       ],
-      price: "Starting from PKR 40,000"
+      price: "Starting from PKR 80,000"
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps that deliver seamless experiences on any device.",
+      icon: Send,
+      title: "Marketing Automation",
+      description: "High-volume automated email flows, WhatsApp campaign triggers, and multi-channel engagement.",
+      color: "bg-[hsl(270,70%,55%)]/10 text-[hsl(270,70%,55%)]",
+      features: [
+        "Ikosender Email Pipelines",
+        "WhatsApp Broadcast Flows",
+        "Drip Campaign Triggers",
+        "Behavioral User Segmenting",
+        "Omnichannel Messaging",
+        "Automated ROI Tracking"
+      ],
+      price: "Starting from PKR 60,000"
+    },
+    {
+      icon: Cpu,
+      title: "API Systems Integration",
+      description: "Unify your entire software ecosystem (SaaS, databases, webhooks) into frictionless automated operations.",
       color: "bg-[hsl(45,90%,50%)]/10 text-[hsl(45,90%,50%)]",
       features: [
-        "iOS Development",
-        "Android Development",
-        "Cross-Platform Apps",
-        "App Store Optimization",
-        "Push Notifications",
-        "Analytics Integration"
+        "Custom REST/GraphQL APIs",
+        "Webhook Relay Systems",
+        "SaaS Tool Bridging",
+        "Cloud Data Sync (AWS/GCP)",
+        "Automated Backup Flows",
+        "24/7 Security Auditing"
       ],
-      price: "Starting from PKR 300,000"
-    },
-    {
-      icon: Bot,
-      title: "AI Agent Development",
-      description: "Custom conversational AI bots, LLM integrations, and automated customer support workflows.",
-      color: "bg-orange-500/10 text-orange-500",
-      features: [
-        "LLM & GPT Integrations",
-        "WhatsApp & Messenger Automation",
-        "RAG (Knowledge Base Integration)",
-        "Customer Support AI Agents",
-        "Workflow Automation Triggers",
-        "Voice Assistant Development"
-      ],
-      price: "Starting from PKR 100,000"
-    },
+      price: "Starting from PKR 120,000"
+    }
   ];
 
   return (
@@ -127,14 +112,13 @@ const ServicesPage = () => {
         <div className="container mx-auto relative">
           <div className="text-center max-w-4xl mx-auto">
             <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-6">
-              Our Services
+              Automation Services
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Complete <span className="text-gradient-orange">Digital Solutions</span>
+              Intelligent Business <span className="text-gradient-orange">Automation</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              From concept to execution, we provide end-to-end digital services
-              that help your business stand out and dominate in the digital age.
+              From custom AI agents to enterprise CRM/ERP integrations, we engineer automated workflows that eliminate friction and multiply operational efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">

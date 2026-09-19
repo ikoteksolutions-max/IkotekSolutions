@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import { Check, ArrowRight, Star, Shield, Zap, Globe, Search, Megaphone, Code, Palette, Smartphone, Cpu, Bot } from "lucide-react";
+import { Check, ArrowRight, Star, Shield, Zap, Globe, Search, Megaphone, Code, Palette, Smartphone, Cpu, Bot, Workflow, Database, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -62,233 +62,175 @@ const PricingPage = () => {
 
   const servicePricing = [
     {
-      id: "web-development",
-      service: "Web Development",
-      icon: Globe,
+      id: "ai-workflow-automation",
+      service: "AI Workflow Automation",
+      icon: Workflow,
       plans: [
         {
-          title: "Basic",
-          price: "PKR 50,000",
-          description: "Perfect for startups and simple landing pages.",
-          features: ["5 Dynamic Pages", "Mobile Responsive", "Contact Form", "Basic SEO", "1 Month Support", "Free Hosting (1yr)"],
-          icon: Zap
-        },
-        {
-          title: "Standard",
-          price: "PKR 120,000",
-          description: "Ideal for growing businesses needing more features.",
-          features: ["15 Dynamic Pages", "E-commerce Ready", "CMS Integration", "Advanced SEO", "3 Months Support", "Custom Animations"],
-          highlighted: true,
-          icon: Star
-        },
-        {
-          title: "Premium",
-          price: "PKR 250,000",
-          description: "Enterprise-grade solutions for large scale projects.",
-          features: ["Unlimited Pages", "Custom Web Apps", "API Integrations", "Full Security Audit", "12 Months Support", "VIP Priority Hosting"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "seo-optimization",
-      service: "SEO Optimization",
-      icon: Search,
-      plans: [
-        {
-          title: "Basic Search",
-          price: "PKR 25,000/mo",
-          description: "Initial visibility boost for small businesses.",
-          features: ["Keyword Research", "On-page Analysis", "Basic Backlinks", "Monthly Report", "Local SEO setup"],
-          icon: Zap
-        },
-        {
-          title: "Growth SEO",
-          price: "PKR 60,000/mo",
-          description: "Strategic growth for competitive markets.",
-          features: ["Advanced Competition Analysis", "Content Strategy", "High DA Backlinks", "Technical SEO Fixes", "24/7 Monitoring Tool"],
-          highlighted: true,
-          icon: Star
-        },
-        {
-          title: "Enterprise SEO",
-          price: "PKR 150,000/mo",
-          description: "Complete market domination strategy.",
-          features: ["Global Rank Tracking", "PR Backlinks", "Internal Linking Audit", "Custom Content Marketing", "Dedicated Manager"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "digital-marketing",
-      service: "Digital Marketing",
-      icon: Megaphone,
-      plans: [
-        {
-          title: "Starter Pack",
-          price: "PKR 35,000/mo",
-          description: "Small scale social media presence.",
-          features: ["1 Platform (FB/IG)", "12 Regular Posts", "Basic Ad Management", "Basic Graphics", "Monthly Insights"],
-          icon: Zap
-        },
-        {
-          title: "Business Pro",
-          price: "PKR 85,000/mo",
-          description: "Multi-channel marketing with high ROI focus.",
-          features: ["3 Platforms", "25 Premium Posts", "Professional Ad Setup", "Video Content (3 Reels)", "Fortnightly Meetings"],
-          highlighted: true,
-          icon: Star
-        },
-        {
-          title: "Ultimate Brand",
-          price: "PKR 200,000/mo",
-          description: "360-degree digital marketing automation.",
-          features: ["All Platforms", "Daily Posting & Stories", "Unlimited Ad Budget Management", "Custom Brand Shoot", "Email & SMS Marketing"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "custom-software",
-      service: "Custom Software",
-      icon: Code,
-      plans: [
-        {
-          title: "MVP Starter",
-          price: "PKR 200,000",
-          description: "Turn your idea into a working product.",
-          features: ["Core Feature Development", "User Authentication", "Database Setup", "Basic Dashboard", "Deployment Support"],
-          icon: Zap
-        },
-        {
-          title: "Business Solution",
-          price: "PKR 500,000",
-          description: "Full-featured software for your operations.",
-          features: ["Advanced Workflow", "Admin Panel", "Role-based Access", "Third-party Integrations", "6 Months Support"],
-          highlighted: true,
-          icon: Star
-        },
-        {
-          title: "Enterprise Software",
-          price: "Custom",
-          description: "Scalable enterprise architecture.",
-          features: ["Microservices Architecture", "Real-time Monitoring", "High Availability", "End-to-end Encryption", "Dedicated Dev Team"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "ui-ux-design",
-      service: "UI/UX Design",
-      icon: Palette,
-      plans: [
-        {
-          title: "Basic Design",
-          price: "PKR 40,000",
-          description: "Modern look for your existing site.",
-          features: ["5 High-fidelity Screens", "Style Guide", "Responsive Design", "Interactive Prototype", "2 Revision Rounds"],
-          icon: Zap
-        },
-        {
-          title: "Product Design",
+          title: "Starter Pipeline",
           price: "PKR 100,000",
-          description: "Complete product design from scratch.",
-          features: ["15+ UX Screens", "User Research", "Wireframing", "Full Design System", "Developer Handoff"],
-          highlighted: true,
-          icon: Star
+          description: "Automate basic multi-step repetitive tasks.",
+          features: ["Document & OCR Parsing", "Zapier / Make Integration", "Custom Webhook Triggers", "Standard AI Logic Trees", "1 Month Support"],
+          icon: Zap
         },
         {
-          title: "Design System",
+          title: "Pro Workflow",
           price: "PKR 250,000",
-          description: "Enterprise design standards.",
-          features: ["Unlimited Screens", "Component Library", "UX Audit", "A/B Testing Support", "Monthly Design Retainer"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "mobile-development",
-      service: "Mobile Development",
-      icon: Smartphone,
-      plans: [
-        {
-          title: "Cross-Platform",
-          price: "PKR 300,000",
-          description: "One code for both iOS and Android.",
-          features: ["Flutter/RN Development", "Core Features", "App Store Submission", "Push Notifications", "Firebase Integration"],
-          icon: Zap
-        },
-        {
-          title: "Pro App",
-          price: "PKR 650,000",
-          description: "High-performance feature-rich app.",
-          features: ["Offline Capabilities", "Social Media Auth", "Payment Gateway", "Chat System", "Analytics Dashboard"],
+          description: "Full end-to-end automated business process.",
+          features: ["Custom Python AI Agents", "Multi-system Data Routing", "Automated Approval Flows", "Real-time Error Monitoring", "3 Months Support"],
           highlighted: true,
           icon: Star
         },
         {
-          title: "Native Enterprise",
+          title: "Enterprise Workflow",
           price: "Custom",
-          description: "Native iOS & Android excellence.",
-          features: ["Swift & Kotlin Native", "Maximum Performance", "Complex Animations", "Hardware Integration", "Lifetime Maintenance"],
+          description: "High-throughput mission critical automation.",
+          features: ["Autonomous Logic Engine", "Custom Infrastructure (AWS/GCP)", "SLA & 24/7 Monitoring", "Legacy DB Synchronization", "Dedicated Dev Team"],
           icon: Shield
         }
       ]
     },
     {
-      id: "business-automation",
-      service: "Full Business Automation",
-      icon: Cpu,
-      plans: [
-        {
-          title: "Auto-Lite",
-          price: "PKR 300,000",
-          description: "Automate basic recurring tasks.",
-          features: ["CRM Entry Automation", "Email Auto-responders", "Lead Capture Automation", "Basic Zapier Setup", "Internal Process Audit"],
-          icon: Zap
-        },
-        {
-          title: "Business Elite",
-          price: "PKR 750,000",
-          description: "Full workflow automation for your team.",
-          features: ["Custom ERP Development", "Payment Gateway Automation", "Inventory Management", "HR System Automation", "Multi-app Sync"],
-          highlighted: true,
-          icon: Star
-        },
-        {
-          title: "Enterprise Scale",
-          price: "Custom",
-          description: "Custom AI & ML driven business logic automation.",
-          features: ["Custom AI Chatbots", "Big Data Analytics", "Legacy System Migration", "Autonomous Workflows", "24/7 Priority Support"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "ai-agent-development",
-      service: "AI Agent Development",
+      id: "custom-ai-agents",
+      service: "Custom AI Agents & Bots",
       icon: Bot,
       plans: [
         {
           title: "AI Starter Bot",
           price: "PKR 100,000",
           description: "Custom FAQ chatbot with standard LLM setup.",
-          features: ["1 Chat Channel (Web/WhatsApp)", "Basic FAQ Training", "Standard GPT-4o Integration", "Lead Gen Capture Form", "1 Month Support", "Basic Dashboard"],
+          features: ["1 Chat Channel (Web/WhatsApp)", "Basic FAQ Training", "Standard GPT-4o Integration", "Lead Gen Capture Form", "1 Month Support"],
           icon: Zap
         },
         {
           title: "AI Business Pro",
           price: "PKR 250,000",
-          description: "Intelligent assistant with dynamic workflows and integrations.",
-          features: ["2 Chat Channels (WhatsApp + Web)", "Custom Knowledge Base (RAG)", "Database Integrations", "Custom API Action Triggers", "3 Months Support & Analytics", "Fine-tuned Prompts"],
+          description: "Intelligent assistant with dynamic workflows.",
+          features: ["2 Chat Channels (WhatsApp + Web)", "Custom Knowledge Base (RAG)", "Database Integrations", "Custom API Action Triggers", "3 Months Support"],
           highlighted: true,
           icon: Star
         },
         {
           title: "AI Enterprise Logic",
           price: "Custom",
-          description: "Autonomous multi-agent system matching complex business logic.",
-          features: ["Multi-Agent Orchestration", "Voice Assistant Integration", "Legacy System Synchronization", "Custom Model Fine-tuning", "Ongoing SLA Maintenance", "24/7 Security Audit"],
+          description: "Autonomous multi-agent system for complex logic.",
+          features: ["Multi-Agent Orchestration", "Voice Assistant Integration", "Legacy System Synchronization", "Custom Model Fine-tuning", "Ongoing Maintenance"],
+          icon: Shield
+        }
+      ]
+    },
+    {
+      id: "crm-erp-automation",
+      service: "CRM & ERP Automation",
+      icon: Database,
+      plans: [
+        {
+          title: "CRM Sync",
+          price: "PKR 200,000",
+          description: "HubSpot, Salesforce, or Zoho customer sync.",
+          features: ["Lead Auto-Ingestion", "Customer Pipeline Stages", "Automated Task Creation", "Bi-directional Data Sync", "Basic Admin Panel"],
+          icon: Zap
+        },
+        {
+          title: "ERP Automation",
+          price: "PKR 450,000",
+          description: "Automated billing, invoicing, and inventory.",
+          features: ["Automated Invoice Creation", "Inventory Stock Alerts", "Payment Gateway Webhooks", "Role-based Access", "6 Months Support"],
+          highlighted: true,
+          icon: Star
+        },
+        {
+          title: "Enterprise ERP Engine",
+          price: "Custom",
+          description: "Custom ERP architecture and autonomous operations.",
+          features: ["Microservices Architecture", "Legacy SAP/Oracle Sync", "High Availability", "End-to-end Encryption", "Dedicated SLA"],
+          icon: Shield
+        }
+      ]
+    },
+    {
+      id: "lead-sales-automation",
+      service: "Lead & Sales Automation",
+      icon: Zap,
+      plans: [
+        {
+          title: "Lead Qualifier",
+          price: "PKR 80,000",
+          description: "Instant lead capture and scoring.",
+          features: ["Form Lead Ingestion", "AI Lead Scoring", "Email Notification Alerts", "Basic CRM Routing", "1 Month Support"],
+          icon: Zap
+        },
+        {
+          title: "Sales Engine Pro",
+          price: "PKR 180,000",
+          description: "Full automated sales pipeline and booking.",
+          features: ["Cal.com / Calendly Integration", "Instant AI WhatsApp Follow-up", "Deal Stage Automations", "Rep Lead Round-Robin", "Sales Analytics"],
+          highlighted: true,
+          icon: Star
+        },
+        {
+          title: "Autonomous Sales Hub",
+          price: "Custom",
+          description: "End-to-end AI outreach and deal closing.",
+          features: ["Multi-channel Outreach Engine", "AI Cold Email & SMS", "Custom Voice Agent Caller", "Live CRM Sync", "Dedicated Account Manager"],
+          icon: Shield
+        }
+      ]
+    },
+    {
+      id: "marketing-automation",
+      service: "Marketing Automation",
+      icon: Send,
+      plans: [
+        {
+          title: "Mailer Lite",
+          price: "PKR 60,000/mo",
+          description: "Automated email sequences & Ikosender setup.",
+          features: ["Ikosender Integration", "1 Platform Automation", "Drip Sequence Triggers", "User Segmenting", "Monthly Analytics"],
+          icon: Zap
+        },
+        {
+          title: "Omnichannel Pro",
+          price: "PKR 150,000/mo",
+          description: "Multi-channel automated marketing campaigns.",
+          features: ["Email & WhatsApp Sequences", "Behavioral Trigger Flows", "Cart Abandonment Recovery", "Custom Lead Magnets", "Fortnightly Review"],
+          highlighted: true,
+          icon: Star
+        },
+        {
+          title: "Enterprise Brand Growth",
+          price: "Custom",
+          description: "360-degree marketing automation suite.",
+          features: ["All Messaging Channels", "Autonomous Ad Spend Sync", "Custom Analytics Dashboard", "Unlimited Flow Building", "Dedicated Strategist"],
+          icon: Shield
+        }
+      ]
+    },
+    {
+      id: "api-systems-integration",
+      service: "API Systems Integration",
+      icon: Cpu,
+      plans: [
+        {
+          title: "API Connector",
+          price: "PKR 120,000",
+          description: "Connect 2 to 3 SaaS software tools.",
+          features: ["Webhook Relay Setup", "REST API Data Mapping", "Error Handling Triggers", "Documentation", "1 Month Support"],
+          icon: Zap
+        },
+        {
+          title: "Hub Integration",
+          price: "PKR 280,000",
+          description: "Unify your central SaaS software stack.",
+          features: ["Multi-API Ecosystem", "Real-time Event Webhooks", "Data Transformation Engine", "Cloud Middleware (AWS)", "3 Months Support"],
+          highlighted: true,
+          icon: Star
+        },
+        {
+          title: "Enterprise Integration",
+          price: "Custom",
+          description: "Custom middleware for legacy and modern cloud software.",
+          features: ["High-Throughput Queueing", "GraphQL / REST Adapters", "24/7 Failover System", "Security & Encryption", "Full SLA Coverage"],
           icon: Shield
         }
       ]

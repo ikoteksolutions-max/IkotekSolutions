@@ -9,24 +9,24 @@ import {
 const FAQSection = () => {
     const faqs = [
         {
-            question: "How much does a typical project cost?",
-            answer: "Every project is unique. We offer flexible pricing models including fixed-price for well-defined scopes and time-and-materials for evolving projects. Contact us for a free detailed quote tailored to your specific needs."
+            question: "How does Business Automation help my company?",
+            answer: "Business Automation eliminates repetitive manual tasks, cuts operational costs by up to 60%, speeds up customer response times with AI agents, and prevents human errors across your CRM, ERP, and sales pipelines."
         },
         {
-            question: "How long does it take to build a website/app?",
-            answer: "Timeline depends on complexity. A standard corporate website might take 2-4 weeks, while a complex custom web application or mobile app could take 8-12 weeks. We provide a detailed timeline during the proposal phase."
+            question: "Can you integrate with our existing CRM and software tools?",
+            answer: "Yes! We connect seamlessly with major platforms like HubSpot, Salesforce, Zoho, WhatsApp, Shopify, Slack, PostgreSQL, custom REST APIs, and legacy ERP databases using custom webhooks and AI middleware."
         },
         {
-            question: "Do you provide support after launch?",
-            answer: "Absolutely! We offer various support and maintenance packages to ensure your digital product remains secure, up-to-date, and performing optimally long after the initial launch."
+            question: "Are custom AI Agents and automation workflows secure?",
+            answer: "Security is our top priority. All data pipelines and AI agent integrations adhere to strict end-to-end encryption standards, role-based access controls, and private RAG vector storage."
         },
         {
-            question: "Will my website be mobile-friendly and SEO optimized?",
-            answer: "Yes, standard. All our websites are built with a mobile-first approach and include core SEO best practices (speed optimization, meta tags, semantic HTML) to give you a head start in search rankings."
+            question: "How long does a typical automation project take?",
+            answer: "Initial AI agent chatbots or Zapier/Make workflow pipelines take 1 to 2 weeks. Full enterprise CRM/ERP automation systems typically require 3 to 6 weeks depending on custom API scope."
         },
         {
-            question: "What technologies do you work with?",
-            answer: "We specialize in modern stacks including React, Next.js, Node.js, Python, Flutter for mobile, and various cloud platforms like AWS and Firebase. We choose the best tech for your specific goals."
+            question: "Do you provide maintenance and monitoring after deployment?",
+            answer: "Absolutely! We provide continuous real-time error monitoring, prompt optimization, model updates, and maintenance support to ensure your automated pipelines run smoothly 24/7."
         }
     ];
 

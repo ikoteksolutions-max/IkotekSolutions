@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Search, Megaphone, Code, Palette, Smartphone, Loader2, Check, Bot } from "lucide-react";
+import { ArrowRight, Globe, Search, Megaphone, Code, Palette, Smartphone, Loader2, Check, Bot, Workflow, Database, Zap, Cpu, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -18,13 +18,12 @@ const Hero = () => {
   });
 
   const services = [
-    { icon: Globe, label: "Web Development" },
-    { icon: Search, label: "SEO Optimization" },
-    { icon: Megaphone, label: "Digital Marketing" },
-    { icon: Code, label: "Custom Software" },
-    { icon: Palette, label: "UI/UX Design" },
-    { icon: Smartphone, label: "Mobile Apps" },
-    { icon: Bot, label: "AI Agent Development" },
+    { icon: Workflow, label: "AI Workflows" },
+    { icon: Bot, label: "Custom AI Agents" },
+    { icon: Database, label: "CRM / ERP Automation" },
+    { icon: Zap, label: "Sales Automation" },
+    { icon: Send, label: "Marketing Automation" },
+    { icon: Cpu, label: "Systems Integration" },
   ];
 
   const toggleService = (service: string) => {
@@ -112,20 +111,19 @@ const Hero = () => {
             <div className="space-y-5 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full text-sm font-medium text-muted-foreground">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Innovative Digital Solutions
+                Intelligent Business Automation & AI
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-                Empowering Your
+                Automate Operations.
                 <br />
-                <span className="text-gradient-orange">Digital Success</span>
+                <span className="text-gradient-orange">Scale Efficiency</span>
                 <br />
-                With Technology
+                With AI Workflows
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                We deliver cutting-edge digital solutions that transform businesses. From powerful websites
-                to smart marketing strategies, we help you dominate the digital landscape.
+                We transform manual business processes into autonomous AI-driven workflows. From custom AI agents to CRM & ERP integrations, we eliminate operational bottlenecks and multiply your team's output.
               </p>
             </div>
 

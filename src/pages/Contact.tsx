@@ -110,15 +110,13 @@ const ContactPage = () => {
   };
 
   const services = [
-    "Web Development",
-    "SEO Optimization",
-    "Digital Marketing",
-    "Custom Software",
-    "UI/UX Design",
-    "Mobile Development",
-    "AI Agent Development",
-    "E-Commerce Solutions",
-    "Other",
+    "AI Workflow Automation",
+    "Custom AI Agents & Bots",
+    "CRM & ERP Automation",
+    "Lead & Sales Automation",
+    "Marketing Automation",
+    "API Systems Integration",
+    "Other Business Automation",
   ];
 
   return (

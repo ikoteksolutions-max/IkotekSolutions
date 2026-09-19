@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, MessageCircle, Code, Palette, Globe, Smartphone, LineChart, Search, Cpu, Send, Layout, Sparkles, Layers, Users, Star, Bot } from "lucide-react";
+import { Menu, X, MessageCircle, Code, Palette, Globe, Smartphone, LineChart, Search, Cpu, Send, Layout, Sparkles, Layers, Users, Star, Bot, Workflow, Database, Zap } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
   NavigationMenu,
@@ -19,52 +19,40 @@ const Navbar = () => {
 
   const services = [
     {
-      title: "Web Development",
-      href: "/services#web-development",
-      description: "Custom websites built with modern technologies.",
-      icon: Globe,
+      title: "AI Workflow Automation",
+      href: "/services#ai-workflow-automation",
+      description: "Automate complex business processes with intelligent AI flows.",
+      icon: Workflow,
     },
     {
-      title: "Mobile Apps",
-      href: "/services#mobile-development",
-      description: "Native and cross-platform mobile applications.",
-      icon: Smartphone,
-    },
-    {
-      title: "UI/UX Design",
-      href: "/services#ui/ux-design",
-      description: "User-centered design that delights your customers.",
-      icon: Palette,
-    },
-    {
-      title: "Digital Marketing",
-      href: "/services#digital-marketing",
-      description: "Strategic campaigns to grow your audience.",
-      icon: LineChart,
-    },
-    {
-      title: "SEO Optimization",
-      href: "/services#seo-optimization",
-      description: "Rank higher and drive organic traffic.",
-      icon: Search,
-    },
-    {
-      title: "Custom Software",
-      href: "/services#custom-software",
-      description: "Tailored software solutions for your business.",
-      icon: Code,
-    },
-    {
-      title: "Business Automation",
-      href: "/pricing/business-automation",
-      description: "Automate your marketing and operations.",
-      icon: Cpu,
-    },
-    {
-      title: "AI Agent Development",
-      href: "/services#ai-agent-development",
-      description: "Custom conversational AI bots and workflows.",
+      title: "Custom AI Agents & Bots",
+      href: "/services#custom-ai-agents",
+      description: "Autonomous AI agents built for 24/7 operations & support.",
       icon: Bot,
+    },
+    {
+      title: "CRM & ERP Automation",
+      href: "/services#crm-erp-automation",
+      description: "Streamline customer pipelines and enterprise data sync.",
+      icon: Database,
+    },
+    {
+      title: "Lead & Sales Automation",
+      href: "/services#lead-sales-automation",
+      description: "Automated lead capture, qualification, and sales routing.",
+      icon: Zap,
+    },
+    {
+      title: "Marketing Automation",
+      href: "/services#marketing-automation",
+      description: "Automated messaging, email flows, and multi-channel campaigns.",
+      icon: Send,
+    },
+    {
+      title: "API Systems Integration",
+      href: "/services#api-systems-integration",
+      description: "Connect all your software tools into unified automated workflows.",
+      icon: Cpu,
     },
   ];
 

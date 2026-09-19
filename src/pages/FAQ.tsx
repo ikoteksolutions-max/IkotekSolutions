@@ -10,24 +10,24 @@ import {
 const FAQ = () => {
     const faqs = [
         {
-            question: "What services do you offer?",
-            answer: "We offer a comprehensive range of digital services including Web Development, Mobile App Development, UI/UX Design, SEO Optimization, Digital Marketing, and Custom Software Solutions.",
+            question: "What automation services do you offer?",
+            answer: "We offer specialized Business Automation solutions including AI Workflow Automation, Custom AI Agents & Chatbots, CRM/ERP Synchronization, Lead & Sales Pipeline Automation, Marketing Automation, and API Systems Integration.",
         },
         {
-            question: "How much do your services cost?",
-            answer: "Our pricing varies depending on the scope and complexity of the project. We offer customized quotes to ensure you only pay for what you need. Contact us for a free estimate.",
+            question: "How much does Business Automation cost?",
+            answer: "Automation projects start from PKR 60,000 for simple marketing/sales pipelines up to PKR 450,000+ for enterprise CRM/ERP system integrations. We provide detailed fixed-price quotes tailored to your business scope.",
         },
         {
-            question: "How long does a project take?",
-            answer: "Timeline depends on the project size. A simple website might take 2-4 weeks, while complex applications can take 3-6 months. We provide a detailed timeline with every proposal.",
+            question: "How long does it take to implement automation?",
+            answer: "Simple workflow pipelines or AI chatbots take 1 to 2 weeks. Comprehensive multi-app system integrations typically take 3 to 6 weeks. We provide clear milestone timelines with every proposal.",
         },
         {
-            question: "Do you provide support after launch?",
-            answer: "Yes, we offer ongoing support and maintenance packages to ensure your digital product remains up-to-date and secure.",
+            question: "Do you provide support and monitoring after deployment?",
+            answer: "Yes, we offer ongoing 24/7 automated pipeline monitoring, model updates, prompt optimization, and technical maintenance packages.",
         },
         {
-            question: "How do we get started?",
-            answer: "Simply use our 'Get a Quote' form or contact us directly. We'll schedule a consultation to discuss your requirements and propose the best solution.",
+            question: "How do we get started with automating our operations?",
+            answer: "Simply use our 'Get a Quote' form or contact us directly. We'll conduct an operational audit of your business processes and propose the best automation strategy.",
         },
     ];
 

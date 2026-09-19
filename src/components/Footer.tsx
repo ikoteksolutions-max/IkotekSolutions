@@ -85,8 +85,7 @@ const Footer = () => {
               <img src="/images/logo-full.png" alt="Ikotek Solutions" className="h-12 w-auto brightness-0 invert" />
             </Link>
             <p className="text-background/60 mb-6 max-w-sm">
-              Empowering businesses through innovative digital solutions.
-              We help companies thrive and dominate in the digital age.
+              Empowering global enterprises with intelligent business automation, autonomous AI agents, and enterprise CRM/ERP workflows.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-background/60">
