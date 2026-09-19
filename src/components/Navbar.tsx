@@ -23,42 +23,49 @@ const Navbar = () => {
       href: "/services#full-business-automation",
       description: "Turn-key end-to-end automation of your company's entire operations.",
       icon: Cpu,
+      price: "From PKR 300K",
     },
     {
       title: "AI Workflow Automation",
       href: "/services#ai-workflow-automation",
       description: "Automate complex business processes with intelligent AI flows.",
       icon: Workflow,
+      price: "From PKR 100K",
     },
     {
       title: "Custom AI Agents & Bots",
       href: "/services#custom-ai-agents",
       description: "Autonomous AI agents built for 24/7 operations & support.",
       icon: Bot,
+      price: "From PKR 100K",
     },
     {
       title: "CRM & ERP Automation",
       href: "/services#crm-erp-automation",
       description: "Streamline customer pipelines and enterprise data sync.",
       icon: Database,
+      price: "From PKR 200K",
     },
     {
       title: "Lead & Sales Automation",
       href: "/services#lead-sales-automation",
       description: "Automated lead capture, qualification, and sales routing.",
       icon: Zap,
+      price: "From PKR 80K",
     },
     {
       title: "Marketing Automation",
       href: "/services#marketing-automation",
       description: "Automated messaging, email flows, and multi-channel campaigns.",
       icon: Send,
+      price: "From PKR 60K",
     },
     {
       title: "API Systems Integration",
       href: "/services#api-systems-integration",
       description: "Connect all your software tools into unified automated workflows.",
       icon: Cpu,
+      price: "From PKR 120K",
     },
   ];
 
@@ -143,9 +150,14 @@ const Navbar = () => {
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1.5 mb-2">
                                 {component.description}
                               </p>
-                              <div className="flex gap-4">
-                                <Link to={component.href} className="text-xs font-medium text-primary hover:underline">Overview</Link>
-                                <Link to={`/pricing/${component.title.toLowerCase().replace(/[\s/]+/g, '-')}`} className="text-xs font-medium text-primary hover:underline">View Pricing</Link>
+                              <div className="flex items-center justify-between pt-1">
+                                <div className="flex gap-3">
+                                  <Link to={component.href} className="text-xs font-medium text-primary hover:underline">Overview</Link>
+                                  <Link to={`/pricing/${component.title.toLowerCase().replace(/[\s/]+/g, '-')}`} className="text-xs font-medium text-primary hover:underline">View Pricing</Link>
+                                </div>
+                                <span className="text-[10px] font-semibold text-primary px-2 py-0.5 bg-primary/10 rounded-full">
+                                  {component.price}
+                                </span>
                               </div>
                             </div>
                           </NavigationMenuLink>

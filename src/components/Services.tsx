@@ -8,6 +8,7 @@ const Services = () => {
       title: "Full Business Automation",
       description: "Turn-key end-to-end automation of your company's entire operations, workflows, sales, and AI infrastructure.",
       color: "bg-primary/10 text-primary",
+      price: "Starting from PKR 300,000",
       href: "/services#full-business-automation",
     },
     {
@@ -15,6 +16,7 @@ const Services = () => {
       title: "AI Workflow Automation",
       description: "Custom AI pipelines that automate complex multi-step business logic, decision trees, and document processing.",
       color: "bg-[hsl(200,70%,50%)]/10 text-[hsl(200,70%,50%)]",
+      price: "Starting from PKR 100,000",
       href: "/services#ai-workflow-automation",
     },
     {
@@ -22,6 +24,7 @@ const Services = () => {
       title: "Custom AI Agents & Bots",
       description: "Autonomous conversational AI agents for 24/7 customer support, internal knowledge RAG, and query handling.",
       color: "bg-orange-500/10 text-orange-500",
+      price: "Starting from PKR 100,000",
       href: "/services#custom-ai-agents",
     },
     {
@@ -29,6 +32,7 @@ const Services = () => {
       title: "CRM & ERP Automation",
       description: "Seamless synchronization of customer data, invoice processing, inventory tracking, and enterprise ERP tasks.",
       color: "bg-[hsl(200,70%,50%)]/10 text-[hsl(200,70%,50%)]",
+      price: "Starting from PKR 200,000",
       href: "/services#crm-erp-automation",
     },
     {
@@ -36,6 +40,7 @@ const Services = () => {
       title: "Lead & Sales Automation",
       description: "Automated lead capture, instant qualification, AI follow-ups, and calendar booking routing for sales teams.",
       color: "bg-[hsl(142,70%,45%)]/10 text-[hsl(142,70%,45%)]",
+      price: "Starting from PKR 80,000",
       href: "/services#lead-sales-automation",
     },
     {
@@ -43,6 +48,7 @@ const Services = () => {
       title: "Marketing Automation",
       description: "High-volume automated email flows, WhatsApp campaign triggers, and multi-channel engagement.",
       color: "bg-[hsl(270,70%,55%)]/10 text-[hsl(270,70%,55%)]",
+      price: "Starting from PKR 60,000",
       href: "/services#marketing-automation",
     },
     {
@@ -50,6 +56,7 @@ const Services = () => {
       title: "API Systems Integration",
       description: "Unify your entire software ecosystem (SaaS, databases, webhooks) into frictionless automated operations.",
       color: "bg-[hsl(45,90%,50%)]/10 text-[hsl(45,90%,50%)]",
+      price: "Starting from PKR 120,000",
       href: "/services#api-systems-integration",
     },
   ];
@@ -76,25 +83,32 @@ const Services = () => {
             <Link
               key={service.title}
               to={service.href}
-              className="group relative p-8 bg-card border border-border rounded-2xl hover:shadow-xl hover:border-primary/20 transition-all duration-300 cursor-pointer"
+              className="group relative p-8 bg-card border border-border rounded-2xl hover:shadow-xl hover:border-primary/20 transition-all duration-300 cursor-pointer flex flex-col justify-between"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Icon */}
-              <div className={`w-14 h-14 rounded-xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className="w-7 h-7" />
+              <div>
+                {/* Icon */}
+                <div className={`w-14 h-14 rounded-xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-7 h-7" />
+                </div>
+
+                {/* Content */}
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {service.description}
+                </p>
               </div>
 
-              {/* Content */}
-              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-
-              {/* Arrow */}
-              <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                <ArrowUpRight className="w-5 h-5 text-primary" />
+              {/* Price Tag & Arrow */}
+              <div className="pt-4 border-t border-border mt-auto flex items-center justify-between">
+                <span className="text-xs font-semibold text-primary px-3 py-1.5 bg-primary/10 rounded-full">
+                  {service.price}
+                </span>
+                <span className="text-xs text-muted-foreground group-hover:text-primary font-medium flex items-center gap-1">
+                  Details <ArrowUpRight className="w-4 h-4" />
+                </span>
               </div>
             </Link>
           ))}
