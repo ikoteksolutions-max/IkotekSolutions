@@ -1,4 +1,4 @@
-import { Workflow, Bot, Database, Zap, Send, Cpu, Check, ArrowRight } from "lucide-react";
+import { Globe, Bot, Database, Zap, Send, Cpu, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -12,108 +12,93 @@ const ServicesPage = () => {
   const services = [
     {
       icon: Cpu,
-      title: "Full Business Automation",
-      description: "Turn-key end-to-end automation of your company's entire operations, sales, support, and AI infrastructure.",
+      title: "Full Physical-to-Online Transformation",
+      description: "Turn-key overhaul that transitions your entire offline shop, clinic, or office into a high-revenue automated online operation.",
       color: "bg-primary/10 text-primary",
       features: [
-        "Complete Operational Audit",
-        "Turn-key AI Infrastructure",
-        "Autonomous Sales & Support",
-        "CRM & ERP Data Synchronization",
-        "Custom Management Dashboard",
-        "Dedicated SLA & 24/7 Monitoring"
+        "Operational & Physical Shop Audit",
+        "Turn-key Digital Storefront Setup",
+        "Automated Order Routing & POS Sync",
+        "24/7 WhatsApp AI Customer Support",
+        "Automated Invoicing & Payment Gateways",
+        "Dedicated Post-Launch Staff Training"
       ],
       price: "Starting from PKR 300,000"
     },
     {
-      icon: Workflow,
-      title: "AI Workflow Automation",
-      description: "Custom AI pipelines that automate complex multi-step business logic, decision trees, and document processing.",
+      icon: Globe,
+      title: "Digital Storefront & Booking Portal",
+      description: "Mobile-first online store or appointment booking portal that enables customers to browse, order, and pay without visiting in person.",
       color: "bg-[hsl(200,70%,50%)]/10 text-[hsl(200,70%,50%)]",
       features: [
-        "Autonomous Logic Trees",
-        "Document & OCR Parsing",
-        "Multi-step Zapier/Make Pipelines",
-        "Approval Flow Automations",
-        "Custom Python AI Scripts",
-        "Real-time Error Monitoring"
+        "Mobile-First Customer Ordering Portal",
+        "Automated Appointment & Service Booking",
+        "Interactive Digital Product Catalogs",
+        "Live Customer Order Tracking Portal",
+        "Google Maps & Local SEO Setup",
+        "Responsive Tablet & Mobile Checkout"
       ],
-      price: "Starting from PKR 100,000"
+      price: "Starting from PKR 120,000"
     },
     {
       icon: Bot,
-      title: "Custom AI Agents & Bots",
-      description: "Autonomous conversational AI agents for 24/7 customer support, internal knowledge RAG, and query handling.",
+      title: "24/7 WhatsApp AI Sales & Order Bot",
+      description: "Smart WhatsApp AI agent that interacts with customers, shares catalogs, takes orders, and answers inquiries 24/7 on autopilot.",
       color: "bg-orange-500/10 text-orange-500",
       features: [
-        "LLM & GPT-4o Integrations",
-        "WhatsApp & Messenger Automation",
-        "Knowledge Base RAG Setup",
-        "Customer Support AI Agents",
-        "Automated Action Triggers",
-        "Prompt Fine-tuning"
+        "Instant Conversational Order Taking",
+        "Catalog & Price Lookups via WhatsApp",
+        "Multi-language (English & Urdu) Support",
+        "Seamless Human Hand-off Escalation",
+        "Instant Sales CRM Lead Capture",
+        "Automated Order Status Notifications"
       ],
       price: "Starting from PKR 100,000"
     },
     {
       icon: Database,
-      title: "CRM & ERP Automation",
-      description: "Seamless synchronization of customer data, invoice processing, inventory tracking, and enterprise ERP tasks.",
+      title: "Live POS & Inventory Sync",
+      description: "Real-time synchronization between your physical shop shelves and online channels, preventing stockouts and manual counting.",
       color: "bg-[hsl(200,70%,50%)]/10 text-[hsl(200,70%,50%)]",
       features: [
-        "HubSpot / Salesforce Sync",
-        "Automated Invoice Generation",
-        "Inventory Stock Triggers",
-        "Role-based Data Routing",
-        "Legacy Database Pipelines",
-        "Custom ERP Connectors"
+        "Physical Shelf & Online Stock Sync",
+        "Real-Time Low Stock WhatsApp Alerts",
+        "Multi-Location & Branch Synchronization",
+        "Existing POS & Barcode Scanner Connect",
+        "Automated Supplier Restock Triggers",
+        "Centralized Inventory Analytics Hub"
       ],
-      price: "Starting from PKR 200,000"
+      price: "Starting from PKR 150,000"
     },
     {
       icon: Zap,
-      title: "Lead & Sales Automation",
-      description: "Automated lead capture, instant qualification, AI follow-ups, and calendar booking routing for sales teams.",
+      title: "Automated Invoicing & Digital Payments",
+      description: "Instant card and bank payments, automated PDF invoice generation, and real-time courier dispatch routing.",
       color: "bg-[hsl(142,70%,45%)]/10 text-[hsl(142,70%,45%)]",
       features: [
-        "Instant Lead Qualification",
-        "Automated Meeting Booking",
-        "Multi-channel AI Follow-ups",
-        "CRM Deal State Updates",
-        "Sales Rep Lead Distribution",
-        "Conversion Analytics"
+        "Credit Card, JazzCash & Bank Integration",
+        "Instant Automated PDF Invoicing",
+        "WhatsApp Receipt & Tracking Dispatch",
+        "Courier API Integration (TCS, Trax, Leopard)",
+        "Daily Financial & Cashflow Audit",
+        "Zero-Error Automated Bookkeeping"
       ],
-      price: "Starting from PKR 80,000"
+      price: "Starting from PKR 90,000"
     },
     {
       icon: Send,
-      title: "Marketing Automation",
-      description: "High-volume automated email flows, WhatsApp campaign triggers, and multi-channel engagement.",
+      title: "Customer Retention & Review Automation",
+      description: "Automated WhatsApp & SMS follow-ups, Google review collection, loyalty rewards, and repeat order reminders.",
       color: "bg-[hsl(270,70%,55%)]/10 text-[hsl(270,70%,55%)]",
       features: [
-        "Ikosender Email Pipelines",
-        "WhatsApp Broadcast Flows",
-        "Drip Campaign Triggers",
-        "Behavioral User Segmenting",
-        "Omnichannel Messaging",
-        "Automated ROI Tracking"
+        "Automated 5-Star Google Review Requests",
+        "Post-Purchase Follow-up & Feedback",
+        "Predictive Re-order WhatsApp Reminders",
+        "Automated Birthday & Seasonal Discounts",
+        "VIP Customer Loyalty Retention",
+        "Inactive Customer Win-Back Campaigns"
       ],
-      price: "Starting from PKR 60,000"
-    },
-    {
-      icon: Cpu,
-      title: "API Systems Integration",
-      description: "Unify your entire software ecosystem (SaaS, databases, webhooks) into frictionless automated operations.",
-      color: "bg-[hsl(45,90%,50%)]/10 text-[hsl(45,90%,50%)]",
-      features: [
-        "Custom REST/GraphQL APIs",
-        "Webhook Relay Systems",
-        "SaaS Tool Bridging",
-        "Cloud Data Sync (AWS/GCP)",
-        "Automated Backup Flows",
-        "24/7 Security Auditing"
-      ],
-      price: "Starting from PKR 120,000"
+      price: "Starting from PKR 70,000"
     }
   ];
 
@@ -127,24 +112,24 @@ const ServicesPage = () => {
         <div className="container mx-auto relative">
           <div className="text-center max-w-4xl mx-auto">
             <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-6">
-              Automation Services
+              Transformation Services
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Intelligent Business <span className="text-gradient-orange">Automation</span>
+              Taking Local & Physical Businesses <span className="text-gradient-orange">100% Online & Automated</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              From custom AI agents to enterprise CRM/ERP integrations, we engineer automated workflows that eliminate friction and multiply operational efficiency.
+              We turn traditional offline businesses into scalable, automated online powerhouses. From 24/7 WhatsApp AI ordering to live POS inventory sync and automated billing, your business runs effortlessly on autopilot.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button variant="hero" className="group">
-                  Get Started Today
+                  Automate Your Business
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link to="/work">
+              <Link to="/pricing">
                 <Button variant="outline" className="h-12 px-6">
-                  View Our Work
+                  View Pricing Plans
                 </Button>
               </Link>
             </div>

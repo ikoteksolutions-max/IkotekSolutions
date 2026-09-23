@@ -1,10 +1,9 @@
-import { useParams, Navigate } from "react-router-dom";
-import { Check, ArrowRight, Star, Shield, Zap, Globe, Search, Megaphone, Code, Palette, Smartphone, Cpu, Bot, Workflow, Database, Send } from "lucide-react";
+﻿import { useParams, Link } from "react-router-dom";
+import { Check, ArrowRight, Star, Shield, Zap, Globe, Bot, Database, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import { Link } from "react-router-dom";
 
 const PricingCard = ({ title, price, description, features, highlighted = false, icon: Icon, serviceName }: any) => (
   <div className={`relative p-8 rounded-2xl border transition-all duration-300 flex flex-col h-full ${highlighted
@@ -58,233 +57,194 @@ const PricingPage = () => {
 
   const servicePricing = [
     {
-      id: "full-business-automation",
-      service: "Full Business Automation",
+      id: "full-physical-to-online",
+      service: "Full Physical-to-Online Transformation",
       icon: Cpu,
       plans: [
         {
-          title: "Auto-Lite",
-          price: "PKR 300,000",
-          description: "Automate core recurring tasks and workflows.",
-          features: ["Complete Operations Audit", "CRM & Lead Automation", "Email & Chat Auto-responders", "Zapier / Make Integration", "1 Month Support"],
+          title: "Local Starter Auto",
+          price: "PKR 150,000",
+          description: "Ideal for single retail shops, clinics, salons, or service businesses going online.",
+          features: [
+            "Complete Physical Store Operations Audit",
+            "Mobile-First Digital Catalog & Ordering",
+            "24/7 WhatsApp Auto-Responder",
+            "Google Maps & Local SEO Setup",
+            "Digital Payment QR & Bank Integration",
+            "1 Month SLA Maintenance & Support",
+          ],
           icon: Zap
         },
         {
-          title: "Business Elite",
-          price: "PKR 750,000",
-          description: "Full end-to-end automation for your entire company.",
-          features: ["Turn-key AI Infrastructure", "Custom ERP & Payment Automation", "Autonomous Sales & Support Bots", "Inventory & HR Sync", "6 Months Support"],
+          title: "Business Growth Auto",
+          price: "PKR 350,000",
+          description: "Full end-to-end automation for busy retail stores, restaurants, and wholesalers.",
+          features: [
+            "Full E-Commerce Store & Customer Portal",
+            "24/7 Smart WhatsApp AI Sales & Order Bot",
+            "Live POS & Physical Shelf Inventory Sync",
+            "Automated PDF Invoicing & WhatsApp Receipts",
+            "Courier API Dispatch Setup (TCS / Trax / Leopard)",
+            "Automated Review Booster & 3 Months SLA",
+          ],
           highlighted: true,
           icon: Star
         },
         {
-          title: "Enterprise Autonomous",
-          price: "Custom",
-          description: "Custom AI-driven autonomous enterprise operations.",
-          features: ["Multi-Agent AI Orchestration", "Big Data Analytics", "Legacy System Migration", "24/7 Priority SLA Monitoring", "Dedicated Strategy Team"],
+          title: "Enterprise Omnichannel",
+          price: "PKR 750,000+",
+          description: "Autonomous cloud infrastructure for multi-branch stores, factories, and distributors.",
+          features: [
+            "Multi-Branch Centralized ERP & Stock Sync",
+            "Multi-Agent AI Fleet (Voice + WhatsApp + Web)",
+            "Automated Supplier Re-Ordering & PO Dispatch",
+            "Custom Accounting & Finance Software Integration",
+            "Live Executive Revenue & Analytics Dashboard",
+            "Dedicated Automation Engineer & 24/7 Priority SLA",
+          ],
           icon: Shield
         }
       ]
     },
     {
-      id: "business-automation",
-      service: "Full Business Automation",
-      icon: Cpu,
+      id: "digital-storefront-booking",
+      service: "Digital Storefront & Booking Portal",
+      icon: Globe,
       plans: [
         {
-          title: "Auto-Lite",
-          price: "PKR 300,000",
-          description: "Automate core recurring tasks and workflows.",
-          features: ["Complete Operations Audit", "CRM & Lead Automation", "Email & Chat Auto-responders", "Zapier / Make Integration", "1 Month Support"],
+          title: "Digital Catalog / Menu",
+          price: "PKR 90,000",
+          description: "Interactive online menu or catalog with instant WhatsApp order buttons.",
+          features: [
+            "Mobile-Optimized Digital Catalog",
+            "Direct WhatsApp 'Order Now' Routing",
+            "Fast Cloud Hosting & Custom Domain",
+            "Basic SEO & Google Maps Tagging",
+            "1 Month System Support",
+          ],
           icon: Zap
         },
         {
-          title: "Business Elite",
-          price: "PKR 750,000",
-          description: "Full end-to-end automation for your entire company.",
-          features: ["Turn-key AI Infrastructure", "Custom ERP & Payment Automation", "Autonomous Sales & Support Bots", "Inventory & HR Sync", "6 Months Support"],
+          title: "Automated E-Store / Booking",
+          price: "PKR 180,000",
+          description: "Self-service store or appointment booking where customers order and pay.",
+          features: [
+            "Self-Checkout & Customer Accounts",
+            "Credit Card & Digital Wallet Gateways",
+            "Automated Appointment Slot Booking",
+            "SMS & Email Order Confirmations",
+            "Admin Order Management Panel",
+            "3 Months Technical Support",
+          ],
           highlighted: true,
           icon: Star
         },
         {
-          title: "Enterprise Autonomous",
+          title: "Custom Brand Portal",
           price: "Custom",
-          description: "Custom AI-driven autonomous enterprise operations.",
-          features: ["Multi-Agent AI Orchestration", "Big Data Analytics", "Legacy System Migration", "24/7 Priority SLA Monitoring", "Dedicated Strategy Team"],
+          description: "High-volume web portal with proprietary multi-location workflows.",
+          features: [
+            "Tailored Customer Portal & Loyalty Area",
+            "Multi-Vendor / Multi-Location Logic",
+            "High-Traffic Cloud Infrastructure",
+            "ERP & Core Database Integration",
+            "Full SLA Coverage",
+          ],
           icon: Shield
         }
       ]
     },
     {
-      id: "ai-workflow-automation",
-      service: "AI Workflow Automation",
-      icon: Workflow,
-      plans: [
-        {
-          title: "Starter Pipeline",
-          price: "PKR 100,000",
-          description: "Automate basic multi-step repetitive tasks.",
-          features: ["Document & OCR Parsing", "Zapier / Make Integration", "Custom Webhook Triggers", "Standard AI Logic Trees", "1 Month Support"],
-          icon: Zap
-        },
-        {
-          title: "Pro Workflow",
-          price: "PKR 250,000",
-          description: "Full end-to-end automated business process.",
-          features: ["Custom Python AI Agents", "Multi-system Data Routing", "Automated Approval Flows", "Real-time Error Monitoring", "3 Months Support"],
-          highlighted: true,
-          icon: Star
-        },
-        {
-          title: "Enterprise Workflow",
-          price: "Custom",
-          description: "High-throughput mission critical automation.",
-          features: ["Autonomous Logic Engine", "Custom Infrastructure (AWS/GCP)", "SLA & 24/7 Monitoring", "Legacy DB Synchronization", "Dedicated Dev Team"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "custom-ai-agents",
-      service: "Custom AI Agents & Bots",
+      id: "whatsapp-ai-sales-bot",
+      service: "24/7 WhatsApp AI Sales & Order Bot",
       icon: Bot,
       plans: [
         {
-          title: "AI Starter Bot",
-          price: "PKR 100,000",
-          description: "Custom FAQ chatbot with standard LLM setup.",
-          features: ["1 Chat Channel (Web/WhatsApp)", "Basic FAQ Training", "Standard GPT-4o Integration", "Lead Gen Capture Form", "1 Month Support"],
+          title: "WhatsApp Order Responder",
+          price: "PKR 80,000",
+          description: "Automated greeting bot that sends menus/catalogs and collects customer details.",
+          features: [
+            "Automated Welcome & Menu Sharing",
+            "Customer Information Collection",
+            "Order Confirmation Notifications",
+            "Human Agent Handoff Trigger",
+            "1 Month Support",
+          ],
           icon: Zap
         },
         {
-          title: "AI Business Pro",
-          price: "PKR 250,000",
-          description: "Intelligent assistant with dynamic workflows.",
-          features: ["2 Chat Channels (WhatsApp + Web)", "Custom Knowledge Base (RAG)", "Database Integrations", "Custom API Action Triggers", "3 Months Support"],
+          title: "Intelligent AI Sales Agent",
+          price: "PKR 180,000",
+          description: "Trained GPT-4o agent conversing in English & Urdu, checking stock, and booking orders.",
+          features: [
+            "Natural Language Urdu & English Chat",
+            "Live Product Stock & Price Inquiries",
+            "Direct Order Booking & Customer CRM Sync",
+            "Personalized Upsells & Recommendations",
+            "3 Months Dedicated Support",
+          ],
           highlighted: true,
           icon: Star
         },
         {
-          title: "AI Enterprise Logic",
+          title: "Multi-Agent Fleet",
           price: "Custom",
-          description: "Autonomous multi-agent system for complex logic.",
-          features: ["Multi-Agent Orchestration", "Voice Assistant Integration", "Legacy System Synchronization", "Custom Model Fine-tuning", "Ongoing Maintenance"],
+          description: "Autonomous multi-agent system for voice calls, chat inquiries, and outbound campaigns.",
+          features: [
+            "Voice AI Phone Call Support",
+            "Multi-Number WhatsApp Orchestration",
+            "Deep Internal CRM/POS Database Querying",
+            "Automated Outbound Campaign Triggers",
+            "Ongoing AI Model Tuning & SLA",
+          ],
           icon: Shield
         }
       ]
     },
     {
-      id: "crm-erp-automation",
-      service: "CRM & ERP Automation",
+      id: "pos-inventory-sync",
+      service: "Live POS & Inventory Sync",
       icon: Database,
       plans: [
         {
-          title: "CRM Sync",
-          price: "PKR 200,000",
-          description: "HubSpot, Salesforce, or Zoho customer sync.",
-          features: ["Lead Auto-Ingestion", "Customer Pipeline Stages", "Automated Task Creation", "Bi-directional Data Sync", "Basic Admin Panel"],
+          title: "Single Store Sync",
+          price: "PKR 120,000",
+          description: "Connect physical store barcode/POS system to online storefront.",
+          features: [
+            "Bi-Directional Stock Deduction",
+            "Low Stock WhatsApp Warning Alerts",
+            "CSV / Excel Automated Bulk Upload",
+            "End-of-Day Sales Report Generation",
+            "1 Month Support",
+          ],
           icon: Zap
         },
         {
-          title: "ERP Automation",
-          price: "PKR 450,000",
-          description: "Automated billing, invoicing, and inventory.",
-          features: ["Automated Invoice Creation", "Inventory Stock Alerts", "Payment Gateway Webhooks", "Role-based Access", "6 Months Support"],
+          title: "Multi-Channel Stock Hub",
+          price: "PKR 250,000",
+          description: "Sync stock across physical store, website, Daraz, and WhatsApp simultaneously.",
+          features: [
+            "Real-Time Multi-Channel Synchronization",
+            "Automated Purchase Order Generator",
+            "Warehouse & Store Shelf Tracking",
+            "Barcode Scanner Hardware Integration",
+            "Role-based Staff Access Control",
+            "3 Months Support",
+          ],
           highlighted: true,
           icon: Star
         },
         {
           title: "Enterprise ERP Engine",
           price: "Custom",
-          description: "Custom ERP architecture and autonomous operations.",
-          features: ["Microservices Architecture", "Legacy SAP/Oracle Sync", "High Availability", "End-to-end Encryption", "Dedicated SLA"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "lead-sales-automation",
-      service: "Lead & Sales Automation",
-      icon: Zap,
-      plans: [
-        {
-          title: "Lead Qualifier",
-          price: "PKR 80,000",
-          description: "Instant lead capture and scoring.",
-          features: ["Form Lead Ingestion", "AI Lead Scoring", "Email Notification Alerts", "Basic CRM Routing", "1 Month Support"],
-          icon: Zap
-        },
-        {
-          title: "Sales Engine Pro",
-          price: "PKR 180,000",
-          description: "Full automated sales pipeline and booking.",
-          features: ["Cal.com / Calendly Integration", "Instant AI WhatsApp Follow-up", "Deal Stage Automations", "Rep Lead Round-Robin", "Sales Analytics"],
-          highlighted: true,
-          icon: Star
-        },
-        {
-          title: "Autonomous Sales Hub",
-          price: "Custom",
-          description: "End-to-end AI outreach and deal closing.",
-          features: ["Multi-channel Outreach Engine", "AI Cold Email & SMS", "Custom Voice Agent Caller", "Live CRM Sync", "Dedicated Account Manager"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "marketing-automation",
-      service: "Marketing Automation",
-      icon: Send,
-      plans: [
-        {
-          title: "Mailer Lite",
-          price: "PKR 60,000/mo",
-          description: "Automated email sequences & Ikosender setup.",
-          features: ["Ikosender Integration", "1 Platform Automation", "Drip Sequence Triggers", "User Segmenting", "Monthly Analytics"],
-          icon: Zap
-        },
-        {
-          title: "Omnichannel Pro",
-          price: "PKR 150,000/mo",
-          description: "Multi-channel automated marketing campaigns.",
-          features: ["Email & WhatsApp Sequences", "Behavioral Trigger Flows", "Cart Abandonment Recovery", "Custom Lead Magnets", "Fortnightly Review"],
-          highlighted: true,
-          icon: Star
-        },
-        {
-          title: "Enterprise Brand Growth",
-          price: "Custom",
-          description: "360-degree marketing automation suite.",
-          features: ["All Messaging Channels", "Autonomous Ad Spend Sync", "Custom Analytics Dashboard", "Unlimited Flow Building", "Dedicated Strategist"],
-          icon: Shield
-        }
-      ]
-    },
-    {
-      id: "api-systems-integration",
-      service: "API Systems Integration",
-      icon: Cpu,
-      plans: [
-        {
-          title: "API Connector",
-          price: "PKR 120,000",
-          description: "Connect 2 to 3 SaaS software tools.",
-          features: ["Webhook Relay Setup", "REST API Data Mapping", "Error Handling Triggers", "Documentation", "1 Month Support"],
-          icon: Zap
-        },
-        {
-          title: "Hub Integration",
-          price: "PKR 280,000",
-          description: "Unify your central SaaS software stack.",
-          features: ["Multi-API Ecosystem", "Real-time Event Webhooks", "Data Transformation Engine", "Cloud Middleware (AWS)", "3 Months Support"],
-          highlighted: true,
-          icon: Star
-        },
-        {
-          title: "Enterprise Integration",
-          price: "Custom",
-          description: "Custom middleware for legacy and modern cloud software.",
-          features: ["High-Throughput Queueing", "GraphQL / REST Adapters", "24/7 Failover System", "Security & Encryption", "Full SLA Coverage"],
+          description: "Custom supply chain and multi-warehouse synchronization for large operations.",
+          features: [
+            "Legacy SAP, Oracle, or Custom DB Sync",
+            "Automated Factory Restock Pipelines",
+            "Multi-Branch Financial Consolidation",
+            "Real-Time Audit Trail & Security",
+            "Dedicated DevOps & Database Architect",
+          ],
           icon: Shield
         }
       ]
@@ -304,18 +264,18 @@ const PricingPage = () => {
         <div className="absolute inset-0 dot-pattern opacity-40" />
         <div className="container mx-auto relative px-4 text-center">
           <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-6">
-            Pricing Plans
+            Automation Investment Plans
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             {serviceId
               ? `Pricing for ${filteredPricing[0]?.service || "Our Services"}`
-              : <>Transparent Pricing for <span className="text-gradient-orange">Every Need</span></>
+              : <>Transform Your Business <span className="text-gradient-orange">With Transparent Pricing</span></>
             }
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             {serviceId
-              ? `Transparent pricing packages tailored for ${filteredPricing[0]?.service} excellence.`
-              : "All-inclusive automation packages with clear pricing. No hidden fees — just results."
+              ? `Transparent packages tailored for ${filteredPricing[0]?.service} excellence.`
+              : "Turn-key investment packages to take your physical business fully online and automated with high ROI."
             }
           </p>
         </div>

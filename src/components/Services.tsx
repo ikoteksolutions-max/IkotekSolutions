@@ -1,63 +1,55 @@
-import { Workflow, Bot, Database, Zap, Send, Cpu, ArrowUpRight } from "lucide-react";
+import { Globe, Bot, Database, Zap, Send, Cpu, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
     {
       icon: Cpu,
-      title: "Full Business Automation",
-      description: "Turn-key end-to-end automation of your company's entire operations, workflows, sales, and AI infrastructure.",
+      title: "Full Physical-to-Online Transformation",
+      description: "Turn-key overhaul that transitions your entire offline shop, clinic, or office into a high-revenue automated online operation.",
       color: "bg-primary/10 text-primary",
       price: "Starting from PKR 300,000",
-      href: "/services#full-business-automation",
+      href: "/services#full-physical-to-online",
     },
     {
-      icon: Workflow,
-      title: "AI Workflow Automation",
-      description: "Custom AI pipelines that automate complex multi-step business logic, decision trees, and document processing.",
+      icon: Globe,
+      title: "Digital Storefront & Booking Portal",
+      description: "Mobile-first online store or appointment booking portal that enables customers to browse, order, and pay without visiting in person.",
       color: "bg-[hsl(200,70%,50%)]/10 text-[hsl(200,70%,50%)]",
-      price: "Starting from PKR 100,000",
-      href: "/services#ai-workflow-automation",
+      price: "Starting from PKR 120,000",
+      href: "/services#digital-storefront-booking",
     },
     {
       icon: Bot,
-      title: "Custom AI Agents & Bots",
-      description: "Autonomous conversational AI agents for 24/7 customer support, internal knowledge RAG, and query handling.",
+      title: "24/7 WhatsApp AI Sales & Order Bot",
+      description: "Smart WhatsApp AI agent that interacts with customers, shares catalogs, takes orders, and answers inquiries 24/7 on autopilot.",
       color: "bg-orange-500/10 text-orange-500",
       price: "Starting from PKR 100,000",
-      href: "/services#custom-ai-agents",
+      href: "/services#whatsapp-ai-sales-bot",
     },
     {
       icon: Database,
-      title: "CRM & ERP Automation",
-      description: "Seamless synchronization of customer data, invoice processing, inventory tracking, and enterprise ERP tasks.",
+      title: "Live POS & Inventory Sync",
+      description: "Real-time synchronization between your physical shop shelves and online channels, preventing stockouts and manual counting.",
       color: "bg-[hsl(200,70%,50%)]/10 text-[hsl(200,70%,50%)]",
-      price: "Starting from PKR 200,000",
-      href: "/services#crm-erp-automation",
+      price: "Starting from PKR 150,000",
+      href: "/services#pos-inventory-sync",
     },
     {
       icon: Zap,
-      title: "Lead & Sales Automation",
-      description: "Automated lead capture, instant qualification, AI follow-ups, and calendar booking routing for sales teams.",
+      title: "Automated Invoicing & Digital Payments",
+      description: "Instant card and bank payments, automated PDF invoice generation, and real-time courier dispatch routing.",
       color: "bg-[hsl(142,70%,45%)]/10 text-[hsl(142,70%,45%)]",
-      price: "Starting from PKR 80,000",
-      href: "/services#lead-sales-automation",
+      price: "Starting from PKR 90,000",
+      href: "/services#automated-invoicing-payments",
     },
     {
       icon: Send,
-      title: "Marketing Automation",
-      description: "High-volume automated email flows, WhatsApp campaign triggers, and multi-channel engagement.",
+      title: "Customer Retention & Review Automation",
+      description: "Automated WhatsApp & SMS follow-ups, Google review collection, loyalty rewards, and repeat order reminders.",
       color: "bg-[hsl(270,70%,55%)]/10 text-[hsl(270,70%,55%)]",
-      price: "Starting from PKR 60,000",
-      href: "/services#marketing-automation",
-    },
-    {
-      icon: Cpu,
-      title: "API Systems Integration",
-      description: "Unify your entire software ecosystem (SaaS, databases, webhooks) into frictionless automated operations.",
-      color: "bg-[hsl(45,90%,50%)]/10 text-[hsl(45,90%,50%)]",
-      price: "Starting from PKR 120,000",
-      href: "/services#api-systems-integration",
+      price: "Starting from PKR 70,000",
+      href: "/services#customer-retention-reviews",
     },
   ];
 
@@ -67,13 +59,13 @@ const Services = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-4">
-            Automation Services
+            Physical to Online Transformation
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            End-to-End Business Automation
+            Turn Your Physical Business Into An Automated Online Powerhouse
           </h2>
           <p className="text-lg text-muted-foreground">
-            We architect, deploy, and manage intelligent AI workflows that streamline your entire business operations.
+            We specialize exclusively in taking local and offline businesses completely online — automating sales, inventory, WhatsApp orders, and customer management.
           </p>
         </div>
 

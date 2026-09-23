@@ -70,13 +70,12 @@ const QuotePage = () => {
   }, [searchParams]);
 
   const services = [
-    { icon: Cpu, label: "Full Business Automation", color: "text-primary" },
-    { icon: Workflow, label: "AI Workflow Automation", color: "text-[hsl(200,70%,50%)]" },
-    { icon: Bot, label: "Custom AI Agents & Bots", color: "text-orange-500" },
-    { icon: Database, label: "CRM & ERP Automation", color: "text-[hsl(200,70%,50%)]" },
-    { icon: Zap, label: "Lead & Sales Automation", color: "text-[hsl(142,70%,45%)]" },
-    { icon: Send, label: "Marketing Automation", color: "text-[hsl(270,70%,55%)]" },
-    { icon: Cpu, label: "API Systems Integration", color: "text-[hsl(45,90%,50%)]" },
+    { icon: Cpu, label: "Full Physical-to-Online Transformation", color: "text-primary" },
+    { icon: Globe, label: "Digital Storefront & Booking Portal", color: "text-[hsl(200,70%,50%)]" },
+    { icon: Bot, label: "24/7 WhatsApp AI Sales & Order Bot", color: "text-orange-500" },
+    { icon: Database, label: "Live POS & Inventory Sync", color: "text-[hsl(200,70%,50%)]" },
+    { icon: Zap, label: "Automated Invoicing & Payments", color: "text-[hsl(142,70%,45%)]" },
+    { icon: Send, label: "Customer Retention & Review Flows", color: "text-[hsl(270,70%,55%)]" },
   ];
 
   const budgets = [

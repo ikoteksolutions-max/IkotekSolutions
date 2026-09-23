@@ -1,30 +1,30 @@
-import { Search, Palette, Code, Rocket } from "lucide-react";
+import { Search, Globe, Cpu, Rocket } from "lucide-react";
 
 const Process = () => {
   const steps = [
     {
       icon: Search,
       number: "01",
-      title: "Discovery",
-      description: "We dive deep into understanding your business, goals, and target audience to create a strategic roadmap.",
+      title: "Physical Audit & Mapping",
+      description: "We analyze your physical store/office, manual registers, customer bottlenecks, and current workflows to map out your automation blueprint.",
     },
     {
-      icon: Palette,
+      icon: Globe,
       number: "02",
-      title: "Design",
-      description: "Our creative team crafts stunning visuals and intuitive interfaces that align with your brand identity.",
+      title: "Digital System Setup",
+      description: "We build your online storefront, digital catalog, appointment portal, and secure payment gateways tailored to your exact industry.",
     },
     {
-      icon: Code,
+      icon: Cpu,
       number: "03",
-      title: "Development",
-      description: "We build robust, scalable solutions using cutting-edge technologies and best practices.",
+      title: "AI & Inventory Wiring",
+      description: "We deploy 24/7 WhatsApp AI order bots, link your physical shelf inventory to online channels, and automate PDF invoicing.",
     },
     {
       icon: Rocket,
       number: "04",
-      title: "Deployment",
-      description: "We launch your project with thorough testing and provide ongoing support for continued success.",
+      title: "Autopilot Launch & Training",
+      description: "Your business runs 24/7 on autopilot. We train your team, hand over live management dashboards, and provide dedicated ongoing support.",
     },
   ];
 
@@ -38,16 +38,15 @@ const Process = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-4">
-            Our Process
+            Transformation Journey
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            How Ikotek Delivers
+            How We Take Your Business
             <br />
-            <span className="text-gradient-orange">Digital Excellence</span>
+            <span className="text-gradient-orange">Online & On Autopilot</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our proven methodology ensures every project is delivered on time,
-            within budget, and exceeds expectations.
+            A proven 4-stage transformation methodology designed to transition physical operations into frictionless digital machines.
           </p>
         </div>
 

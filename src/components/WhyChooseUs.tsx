@@ -1,27 +1,27 @@
 
-import { CheckCircle2, Clock, Award, Users, ShieldCheck, Zap } from "lucide-react";
+import { CheckCircle2, Clock, Users, ShieldCheck, Zap } from "lucide-react";
 
 const WhyChooseUs = () => {
     const features = [
         {
-            icon: Clock,
-            title: "On-Time Delivery",
-            description: "We respect your time. Our agile methodology ensures timely delivery of milestones and final deployment without compromising quality."
+            icon: Zap,
+            title: "Zero-Disruption Transition",
+            description: "We digitize and automate your operations without interrupting your ongoing daily physical sales or store activities."
         },
         {
             icon: Users,
-            title: "Expert Team",
-            description: "Work with a dedicated team of senior developers, designers, and strategists who have successfully delivered 500+ projects."
+            title: "Custom-Tailored For Your Niche",
+            description: "Whether you run retail, a clinic, a restaurant, or distribution, our automation logic is built specifically for your physical workflows."
         },
         {
             icon: ShieldCheck,
-            title: "Secure & Scalable",
-            description: "We build systems that are secure by design and ready to scale with your business growth, ensuring long-term reliability."
+            title: "Accurate POS & Inventory Sync",
+            description: "Never worry about stockouts or lost records. Cloud-synchronized databases keep your physical shelves and online sales 100% aligned."
         },
         {
-            icon: Zap,
-            title: "Performance First",
-            description: "Lightning fast loading times and optimized performance are core to our development process, boosting your SEO and User Experience."
+            icon: Clock,
+            title: "Rapid 14-Day Deployment",
+            description: "Go from completely offline to an automated online machine with 24/7 WhatsApp AI ordering in as little as 2 weeks."
         }
     ];
 
@@ -34,14 +34,14 @@ const WhyChooseUs = () => {
                             Why Choose Ikotek
                         </span>
                         <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                            We Don't Just Write Code, We Build Legacies
+                            We Turn Traditional Businesses Into Digital Leaders
                         </h2>
                         <p className="text-lg text-muted-foreground mb-8">
-                            At Ikotek Solutions, we partner with you to understand your vision and transform it into a digital reality. Here is why leading businesses trust us.
+                            We don't just sell software — we study your physical store operations, eliminate manual bottlenecks, and build automated systems that multiply your revenue.
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-4">
-                            {["24/7 Support", "Free Consultation", "Post-Launch Maintenance", "100% Satisfaction"].map((item) => (
+                            {["Zero Sales Disruption", "100% Automated Orders", "Live Inventory Sync", "Dedicated Staff Training"].map((item) => (
                                 <div key={item} className="flex items-center gap-2">
                                     <CheckCircle2 className="w-5 h-5 text-primary" />
                                     <span className="font-medium text-foreground">{item}</span>

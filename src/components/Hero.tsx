@@ -18,13 +18,12 @@ const Hero = () => {
   });
 
   const services = [
-    { icon: Cpu, label: "Full Business Automation" },
-    { icon: Workflow, label: "AI Workflows" },
-    { icon: Bot, label: "Custom AI Agents" },
-    { icon: Database, label: "CRM / ERP Automation" },
-    { icon: Zap, label: "Sales Automation" },
-    { icon: Send, label: "Marketing Automation" },
-    { icon: Cpu, label: "Systems Integration" },
+    { icon: Cpu, label: "Full Physical-to-Online Transformation" },
+    { icon: Globe, label: "Digital Storefront & Booking Portal" },
+    { icon: Bot, label: "24/7 WhatsApp AI Order Bot" },
+    { icon: Database, label: "POS & Physical Inventory Sync" },
+    { icon: Zap, label: "Automated Invoicing & Payments" },
+    { icon: Send, label: "Customer Retention & Review Flows" },
   ];
 
   const toggleService = (service: string) => {
@@ -112,19 +111,19 @@ const Hero = () => {
             <div className="space-y-5 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full text-sm font-medium text-muted-foreground">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Intelligent Business Automation & AI
+                Physical to 100% Online Business Automation
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-                Automate Operations.
+                Transform Physical Business
                 <br />
-                <span className="text-gradient-orange">Scale Efficiency</span>
+                <span className="text-gradient-orange">Into 100% Automated</span>
                 <br />
-                With AI Workflows
+                Online Operations
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                We transform manual business processes into autonomous AI-driven workflows. From custom AI agents to CRM & ERP integrations, we eliminate operational bottlenecks and multiply your team's output.
+                We take traditional, offline, and local businesses completely online. We automate your sales, orders, 24/7 WhatsApp customer service, physical inventory sync, and invoicing so your business runs on autopilot.
               </p>
             </div>
 

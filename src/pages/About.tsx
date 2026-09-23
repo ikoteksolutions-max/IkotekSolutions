@@ -50,10 +50,10 @@ const AboutPage = () => {
               About Us
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Pioneers in <span className="text-gradient-orange">Business Automation</span>
+              Pioneers in <span className="text-gradient-orange">Physical-to-Online</span> Automation
             </h1>
             <p className="text-xl text-muted-foreground">
-              Established in 2025 in Karachi, Ikotek Solutions engineers AI-driven workflows, custom AI agents, and enterprise integrations to eliminate operational bottlenecks worldwide.
+              Established in 2025 in Karachi, Ikotek Solutions specializes exclusively in transforming traditional, local, and physical businesses into fully automated online operations.
             </p>
           </div>
         </div>
@@ -83,13 +83,13 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Ikotek Solutions was founded in 2025 in Karachi with a clear vision: to empower modern businesses with frictionless, automated operations.
+                  Ikotek Solutions was founded in 2025 in Karachi with a clear vision: to help traditional, offline, and local businesses make the leap into the digital economy without chaos or manual friction.
                 </p>
                 <p>
-                  Recognizing that modern teams spend up to 40% of their time on repetitive tasks, we specialized exclusively in Business Automation, AI Agents, CRM/ERP pipelines, and cloud integrations.
+                  Recognizing that local shops, clinics, wholesalers, and physical companies lose customers and waste hours on manual phone calls, paper registers, and disconnected stock, we built a specialized automation agency. We bridge the gap between physical retail and 100% automated online operations.
                 </p>
                 <p>
-                  Today, we are a trusted partner for companies globally, deploying intelligent workflows that reduce operating costs and accelerate business growth.
+                  Today, we are a trusted partner for businesses across Pakistan and globally — deploying digital storefronts, 24/7 WhatsApp AI ordering, real-time POS stock sync, and automated invoicing that let businesses run on autopilot.
                 </p>
               </div>
             </div>

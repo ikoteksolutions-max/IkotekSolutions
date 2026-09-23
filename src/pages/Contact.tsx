@@ -110,13 +110,12 @@ const ContactPage = () => {
   };
 
   const services = [
-    "Full Business Automation",
-    "AI Workflow Automation",
-    "Custom AI Agents & Bots",
-    "CRM & ERP Automation",
-    "Lead & Sales Automation",
-    "Marketing Automation",
-    "API Systems Integration",
+    "Full Physical-to-Online Transformation",
+    "Digital Storefront & Booking Portal",
+    "24/7 WhatsApp AI Sales & Order Bot",
+    "Live POS & Inventory Sync",
+    "Automated Invoicing & Payments",
+    "Customer Retention & Review Flows",
     "Other Business Automation",
   ];
 
