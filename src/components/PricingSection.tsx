@@ -1,12 +1,12 @@
 ﻿import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight, Zap, Star, Shield, Cpu, Bot, Globe, Database } from "lucide-react";
+import { Check, ArrowRight, Zap, Star, Shield, Cpu, Bot, Globe, Database, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const pricingData = [
   {
     id: "full-transformation",
-    category: "Full Business Transformation",
+    category: "Full Transformation",
     icon: Cpu,
     tagline: "Turn-key physical-to-online automation packages",
     plans: [
@@ -63,7 +63,7 @@ const pricingData = [
   },
   {
     id: "storefront-booking",
-    category: "Digital Storefront & Booking",
+    category: "Storefront & Booking",
     icon: Globe,
     tagline: "Take your physical products and appointments online",
     plans: [
@@ -222,6 +222,114 @@ const pricingData = [
       },
     ],
   },
+  {
+    id: "automated-invoicing-payments",
+    category: "Invoicing & Payments",
+    icon: Zap,
+    tagline: "Instant digital payments & automated courier dispatch",
+    plans: [
+      {
+        title: "Payment QuickStart",
+        price: "PKR 70,000",
+        period: "one-time setup",
+        description: "Card, bank transfer, and QR checkout with instant payment alerts.",
+        features: [
+          "Payment Gateway Integration (Card, JazzCash, EasyPaisa)",
+          "Instant WhatsApp Payment Confirmation Alerts",
+          "Basic Transaction Dashboard",
+          "Customer Payment Verification Link",
+          "1 Month System Support",
+        ],
+        highlighted: false,
+        icon: Zap,
+      },
+      {
+        title: "Automated Billing & Dispatch Pro",
+        price: "PKR 160,000",
+        period: "one-time setup",
+        description: "Instant PDF invoices, WhatsApp receipts, and courier tracking webhooks.",
+        features: [
+          "Instant Automated PDF Invoice Generation",
+          "WhatsApp & Email Receipt Dispatch",
+          "Courier API Integration (TCS / Trax / Leopard)",
+          "Live Delivery Tracking Webhook Routing",
+          "Daily Reconciliation & Sales Ledger Report",
+          "3 Months Dedicated Support",
+        ],
+        highlighted: true,
+        icon: Star,
+      },
+      {
+        title: "Enterprise Financial Engine",
+        price: "Custom",
+        period: "tailored architecture",
+        description: "Multi-branch payment splitting, automated tax reconciliation, and ERP sync.",
+        features: [
+          "Multi-Branch Revenue Routing",
+          "Accounting Software Bridge (QuickBooks/Xero/SAP)",
+          "Automated Sales Tax Calculation",
+          "Real-Time Anti-Fraud & Chargeback Alerts",
+          "24/7 Priority SLA & Dedicated Tech Team",
+        ],
+        highlighted: false,
+        icon: Shield,
+      },
+    ],
+  },
+  {
+    id: "customer-retention-reviews",
+    category: "Retention & Reviews",
+    icon: Send,
+    tagline: "Automated Google reviews & customer re-orders",
+    plans: [
+      {
+        title: "Review Booster Starter",
+        price: "PKR 50,000",
+        period: "one-time setup",
+        description: "Automated post-purchase review requests to skyrocket Google Maps ratings.",
+        features: [
+          "Automated WhatsApp 5-Star Review Requests",
+          "Smart Negative Feedback Interceptor",
+          "Google Business Rating Growth",
+          "Post-Purchase Thank You Sequences",
+          "1 Month System Support",
+        ],
+        highlighted: false,
+        icon: Zap,
+      },
+      {
+        title: "Loyalty & Retention Engine",
+        price: "PKR 120,000",
+        period: "one-time setup",
+        description: "Automated re-order reminders, VIP loyalty tiers, and birthday promo drops.",
+        features: [
+          "Predictive Refill & Re-Order WhatsApp Reminders",
+          "Customer Loyalty Points & VIP Discounts",
+          "Birthday & Festive Promo Automations",
+          "Inactive Customer Win-Back Sequences",
+          "Fortnightly Retention Performance Reports",
+          "3 Months Dedicated Support",
+        ],
+        highlighted: true,
+        icon: Star,
+      },
+      {
+        title: "Enterprise Omnichannel Retention",
+        price: "Custom",
+        period: "tailored architecture",
+        description: "360-degree behavioral marketing automation across WhatsApp, SMS, and Email.",
+        features: [
+          "Multi-Channel Behavioral Trigger Flows",
+          "AI-Driven Personalized Product Recommendations",
+          "Customer Lifetime Value (LTV) Analytics Hub",
+          "Automated SMS & WhatsApp Marketing Broadcasts",
+          "Dedicated Retention Growth Strategist",
+        ],
+        highlighted: false,
+        icon: Shield,
+      },
+    ],
+  },
 ];
 
 const PricingSection = () => {
@@ -251,7 +359,7 @@ const PricingSection = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12 max-w-4xl mx-auto">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-12 max-w-5xl mx-auto">
           {pricingData.map((s) => {
             const Icon = s.icon;
             const isActive = selectedCategory === s.id;
@@ -259,7 +367,7 @@ const PricingSection = () => {
               <button
                 key={s.id}
                 onClick={() => setSelectedCategory(s.id)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-200 cursor-pointer ${
+                className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-200 cursor-pointer ${
                   isActive
                     ? "bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-105"
                     : "bg-background/80 hover:bg-accent text-muted-foreground hover:text-foreground border border-border"

@@ -21,6 +21,7 @@ const Navbar = () => {
     {
       title: "Full Physical-to-Online Transformation",
       href: "/services#full-physical-to-online",
+      pricingId: "full-physical-to-online",
       description: "Turn-key transition of physical store or office into an automated online operation.",
       icon: Cpu,
       price: "From PKR 150K",
@@ -28,6 +29,7 @@ const Navbar = () => {
     {
       title: "Digital Storefront & Booking Portal",
       href: "/services#digital-storefront-booking",
+      pricingId: "digital-storefront-booking",
       description: "Mobile-first online store or appointment booking portal for local businesses.",
       icon: Globe,
       price: "From PKR 90K",
@@ -35,6 +37,7 @@ const Navbar = () => {
     {
       title: "24/7 WhatsApp AI Sales & Order Bot",
       href: "/services#whatsapp-ai-sales-bot",
+      pricingId: "whatsapp-ai-sales-bot",
       description: "Smart WhatsApp AI agent for instant order taking, catalog browsing & customer care.",
       icon: Bot,
       price: "From PKR 80K",
@@ -42,6 +45,7 @@ const Navbar = () => {
     {
       title: "Live POS & Inventory Sync",
       href: "/services#pos-inventory-sync",
+      pricingId: "pos-inventory-sync",
       description: "Real-time sync between physical shop shelves and online channels.",
       icon: Database,
       price: "From PKR 120K",
@@ -49,6 +53,7 @@ const Navbar = () => {
     {
       title: "Automated Invoicing & Payments",
       href: "/services#automated-invoicing-payments",
+      pricingId: "automated-invoicing-payments",
       description: "Instant card & bank checkout, automated PDF invoices, and courier dispatch.",
       icon: Zap,
       price: "From PKR 90K",
@@ -56,6 +61,7 @@ const Navbar = () => {
     {
       title: "Customer Retention & Review Flows",
       href: "/services#customer-retention-reviews",
+      pricingId: "customer-retention-reviews",
       description: "Automated 5-star Google review collection and repeat purchase reminders.",
       icon: Send,
       price: "From PKR 70K",
@@ -146,7 +152,7 @@ const Navbar = () => {
                               <div className="flex items-center justify-between pt-1">
                                 <div className="flex gap-3">
                                   <Link to={component.href} className="text-xs font-medium text-primary hover:underline">Overview</Link>
-                                  <Link to={`/pricing/${component.title.toLowerCase().replace(/[\s/]+/g, '-')}`} className="text-xs font-medium text-primary hover:underline">View Pricing</Link>
+                                  <Link to={`/pricing/${component.pricingId}`} className="text-xs font-medium text-primary hover:underline">View Pricing</Link>
                                 </div>
                                 <span className="text-[10px] font-semibold text-primary px-2 py-0.5 bg-primary/10 rounded-full">
                                   {component.price}
@@ -280,7 +286,7 @@ const Navbar = () => {
                     <Link to={s.href} onClick={() => setIsOpen(false)} className="py-1 text-xs text-muted-foreground hover:text-primary transition-colors">
                       {s.title}
                     </Link>
-                    <Link to={`/pricing/${s.title.toLowerCase().replace(/[\s/]+/g, '-')}`} onClick={() => setIsOpen(false)} className="py-1 text-[10px] font-semibold text-primary hover:underline">
+                    <Link to={`/pricing/${s.pricingId}`} onClick={() => setIsOpen(false)} className="py-1 text-[10px] font-semibold text-primary hover:underline">
                       Pricing
                     </Link>
                   </div>

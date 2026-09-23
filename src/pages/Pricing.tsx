@@ -1,5 +1,5 @@
 ﻿import { useParams, Link } from "react-router-dom";
-import { Check, ArrowRight, Star, Shield, Zap, Globe, Bot, Database, Cpu } from "lucide-react";
+import { Check, ArrowRight, Star, Shield, Zap, Globe, Bot, Database, Cpu, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -248,11 +248,114 @@ const PricingPage = () => {
           icon: Shield
         }
       ]
+    },
+    {
+      id: "automated-invoicing-payments",
+      service: "Automated Invoicing & Digital Payments",
+      icon: Zap,
+      plans: [
+        {
+          title: "Payment QuickStart",
+          price: "PKR 70,000",
+          description: "Card, bank transfer, and QR checkout with instant payment alerts.",
+          features: [
+            "Payment Gateway Integration (Card, JazzCash, EasyPaisa)",
+            "Instant WhatsApp Payment Confirmation Alerts",
+            "Basic Transaction Dashboard",
+            "Customer Payment Verification Link",
+            "1 Month System Support",
+          ],
+          icon: Zap
+        },
+        {
+          title: "Automated Billing & Dispatch Pro",
+          price: "PKR 160,000",
+          description: "Instant PDF invoices, WhatsApp receipts, and courier tracking webhooks.",
+          features: [
+            "Instant Automated PDF Invoice Generation",
+            "WhatsApp & Email Receipt Dispatch",
+            "Courier API Integration (TCS / Trax / Leopard)",
+            "Live Delivery Tracking Webhook Routing",
+            "Daily Reconciliation & Sales Ledger Report",
+            "3 Months Dedicated Support",
+          ],
+          highlighted: true,
+          icon: Star
+        },
+        {
+          title: "Enterprise Financial Engine",
+          price: "Custom",
+          description: "Multi-branch payment splitting, automated tax reconciliation, and ERP sync.",
+          features: [
+            "Multi-Branch Revenue Routing",
+            "Accounting Software Bridge (QuickBooks/Xero/SAP)",
+            "Automated Sales Tax Calculation",
+            "Real-Time Anti-Fraud & Chargeback Alerts",
+            "24/7 Priority SLA & Dedicated Tech Team",
+          ],
+          icon: Shield
+        }
+      ]
+    },
+    {
+      id: "customer-retention-reviews",
+      service: "Customer Retention & Review Automation",
+      icon: Send,
+      plans: [
+        {
+          title: "Review Booster Starter",
+          price: "PKR 50,000",
+          description: "Automated post-purchase review requests to skyrocket Google Maps ratings.",
+          features: [
+            "Automated WhatsApp 5-Star Review Requests",
+            "Smart Negative Feedback Interceptor",
+            "Google Business Rating Growth",
+            "Post-Purchase Thank You Sequences",
+            "1 Month System Support",
+          ],
+          icon: Zap
+        },
+        {
+          title: "Loyalty & Retention Engine",
+          price: "PKR 120,000",
+          description: "Automated re-order reminders, VIP loyalty tiers, and birthday promo drops.",
+          features: [
+            "Predictive Refill & Re-Order WhatsApp Reminders",
+            "Customer Loyalty Points & VIP Discounts",
+            "Birthday & Festive Promo Automations",
+            "Inactive Customer Win-Back Sequences",
+            "Fortnightly Retention Performance Reports",
+            "3 Months Dedicated Support",
+          ],
+          highlighted: true,
+          icon: Star
+        },
+        {
+          title: "Enterprise Omnichannel Retention",
+          price: "Custom",
+          description: "360-degree behavioral marketing automation across WhatsApp, SMS, and Email.",
+          features: [
+            "Multi-Channel Behavioral Trigger Flows",
+            "AI-Driven Personalized Product Recommendations",
+            "Customer Lifetime Value (LTV) Analytics Hub",
+            "Automated SMS & WhatsApp Marketing Broadcasts",
+            "Dedicated Retention Growth Strategist",
+          ],
+          icon: Shield
+        }
+      ]
     }
   ];
 
+  const normalize = (str: string) => str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
   const filteredPricing = serviceId
-    ? servicePricing.filter(s => s.id === serviceId)
+    ? servicePricing.filter(s =>
+        normalize(s.id).includes(normalize(serviceId)) ||
+        normalize(serviceId).includes(normalize(s.id)) ||
+        normalize(s.service).includes(normalize(serviceId)) ||
+        normalize(serviceId).includes(normalize(s.service))
+      )
     : servicePricing;
 
   return (
@@ -267,13 +370,13 @@ const PricingPage = () => {
             Automation Investment Plans
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            {serviceId
-              ? `Pricing for ${filteredPricing[0]?.service || "Our Services"}`
+            {serviceId && filteredPricing.length === 1
+              ? `Pricing for ${filteredPricing[0]?.service}`
               : <>Transform Your Business <span className="text-gradient-orange">With Transparent Pricing</span></>
             }
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            {serviceId
+            {serviceId && filteredPricing.length === 1
               ? `Transparent packages tailored for ${filteredPricing[0]?.service} excellence.`
               : "Turn-key investment packages to take your physical business fully online and automated with high ROI."
             }
@@ -288,7 +391,7 @@ const PricingPage = () => {
             <div className="container mx-auto px-4">
               <SectionHeader
                 title={service.service}
-                subtitle={serviceId ? "Choose your plan" : `${service.service} Plans`}
+                subtitle={`${service.service} Plans`}
                 icon={service.icon}
               />
               <div className="grid md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
@@ -303,7 +406,7 @@ const PricingPage = () => {
         <section className="py-20 text-center">
           <h2 className="text-2xl font-bold mb-4">Service Not Found</h2>
           <Link to="/pricing">
-            <Button>View All Pricing</Button>
+            <Button>View All Pricing Plans</Button>
           </Link>
         </section>
       )}
